@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>vincent van gogh - Exhibition</title>
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/custome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="icon" type="image/ico" href="images/van-gogh.ico">
+    <style>
+        .play_btn {
+            width: 50px;
+            position: relative;
+            top: -50%;
+            cursor: pointer;
+            transition: 0.5s;
+            opacity: 0;
+        }
+        
+        .col-lg-4:hover .play_btn {
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background: transparent !important;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+
+    <main>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top mb-5">
+                <a class="navbar-brand" href="index.html"><img src="images/Vincent_Van_Gogh_Signature.svg" alt="sigature"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="exhibition.html">Exhibition</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="information.html">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="exhibition_fr.html">Fr</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="container pt-5">
+            <div class="pt-4">
+
+                <h1 class="diaplay-1 p-5 navbar-custom text-white bg-gradient-dark text-center">AN IMMERSIVE EXHIBITION</h1>
+            </div>
+
+            <div class="bg-light pt-4 pb-4 no-gutters align-items-center">
+
+
+                <p class="px-5 mt-4 text-justify">
+                    A spectacular and immersive exhibition of the works of Vincent Van Gogh, will take viewers on a unique journey inside the artist’s paintings. Imagine Van Gogh, is an exhibition where one can admire The Starry Night, Irises and Sunflowers, or be drawn
+                    into the intimacy of his Bedroom in Arles.
+                </p>
+
+
+                <p class="px-5 mt-4 text-justify">
+
+                    An experience that brings viewers to the heart of its images, Imagine Van Gogh is accompanied by the music of the great composers Chopin, Saint-Saëns, Mozart, Bach, Delibes and Satie.
+                </p>
+
+                <audio id="audio" controls class="pl-4">
+                    <source src="audio/ChopinNocturne.mp3" type="audio/mpeg">
+                </audio>
+
+                <div class="row text-center no-gutters">
+                    <div class="col-lg-6 px-lg-4"><img src="images/exhibition/2.jpg" alt="exhibition2" style="max-width: 90%; height: auto;" class=" img-fluid mx-sm-1 my-2" /></div>
+                    <div class="col-lg-6 px-lg-4"><img src="images/exhibition/1.jpg" alt="exhibition1" style="max-width: 90%; height: auto;" class=" img-fluid mx-sm-1 my-2" /></div>
+                </div>
+
+                <p class="px-5 mt-4 text-justify">
+                    The viewer is guided by their senses rather than knowledge. They can allow themselves to be completely immersed in the experience without even being aware of the technical and technological performance of an exhibition of this scale.
+                </p>
+
+                <div class="row text-center no-gutters">
+                    <div class="col-lg-6 px-lg-4"><img src="images/exhibition/5.jpg" alt="exhibition2" style="max-width: 90%; height: auto;" class=" img-fluid mx-sm-2 my-2 " /></div>
+                    <div class="col-lg-6 px-lg-4"><img src="images/exhibition/6.jpg" alt="exhibition1" style="max-width: 90%; height: auto;" class=" img-fluid mx-sm-2 my-2 " /></div>
+                </div>
+
+                <p class="px-5 mt-4 text-justify">
+                    The images are projected on “out of the ordinary” 3D shapes, offering different angles from which to discover Van Gogh’s work. Viewers, as creators of their own journey and closer than ever to the paintings, feel the power of the artist’s work within
+                    the first few seconds of the experience.
+                </p>
+
+                <div class="row text-center no-gutters">
+                    <div class="col-lg-6 px-lg-4"><img src="images/exhibition/7.jpg" alt="exhibition1" style="max-width: 90%; height: auto;" class=" img-fluid mx-sm-2 my-2 " /></div>
+                    <div class="col-lg-6 px-lg-4"><img src="images/exhibition/8.jpg" alt="exhibition1" style="max-width: 90%; height: auto;" class=" img-fluid mx-sm-2 my-2 " /></div>
+                </div>
+
+                <p class="px-5 mt-4 text-justify">
+                    Designed by Annabelle Mauger, this artistic approach uses the concept of “Image Totale”, which situates the spectator right inside the paintings in order to explore their fine detail. More than 200 works of Van Gogh are projected in “Image Totale”. The
+                    works leap out of their frames, expanding in a profusion of continuous flow.
+                </p>
+
+                <p class="px-5 mt-4 text-justify">
+                    Plunged into darkness with only the unique light of the paintings to guide them, each visitor experiences a personal approach to the works’ presentation. Free to choose their own path, the visitor-turned-creator is able to look in many directions without
+                    the imposition of time. They venture in complete freedom, penetrating the oeuvre of Van Gogh.</p>
+
+            </div>
+
+        </div>
+        <div class="container text-center">
+            <h1 class="display-3 py-5 ">Video Gallery</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 video">
+                    <img src="images/exhibition/MontrealVanGoghStyleFull.png">
+                    <!--<iframe width="350"  height="255" src="https://www.youtube.com/embed/BbgrHnbgoDU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
+                <div class="col-lg-4 col-md-6 video">
+                    <img src="images/exhibition/MontrealJacquesCartierSquare.png">
+                    <!--<iframe width="350" height="255" src="https://www.youtube.com/embed/rVkWNKyUDMM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
+                <div class="col-lg-4 col-md-6 video">
+                    <img src="images/exhibition/VanGoghMontreal.png">
+                    <!--<iframe width="350" height="255" src="https://www.youtube.com/embed/9ENtwcZEE48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <div class="modal fade" id="play-video-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <video width="100%" controls>
+                            <source src="video/ExhibitionMontreal.mp4" type="video/mp4" />
+                        </video>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="play-video-2">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <video width="100%" controls>
+                            <source src="video/JimVanDerZeeStarryNight.mp4" type="video/mp4" />
+                        </video>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="play-video-3">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <video width="100%" controls>
+                            <source src="video/ImmersiveExhibition.mp4" type="video/mp4" />
+                        </video>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        -->
+
+
+        <!-- Site footer -->
+        <footer class="site-footer pb-4 mt-5">
+            <div class="container ">
+                <div class="d-flex flex-row bd-highlight flex-wrap justify-content-between ">
+                    <div class="p-2 bd-highlight ">
+                        <div>
+                            <h6 class="border-bottom py-3">Designed by</h6>
+                            <ul class="footer-links mb-0">
+                                <li>
+                                    Arablou Zahra
+                                </li>
+                                <li>
+                                    MalekTabrizi Parinaz
+                                </li>
+                                <li>
+                                    Sardaryan Elina
+                                </li>
+                                <li>
+                                    Ying Luo
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pb-4 mt-4 bd-highlight ">
+                        <div>
+                            <h6>Web Design Course at</h6>
+                            <ul class="footer-links pl-3">
+                                <li>
+                                    <a href="http://www.johnabbott.qc.ca/ " target="blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                                </li>
+                            </ul>
+                            <ul class="social">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">
+                                        <i class="fab fa-twitter"></i> </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex flex-row bd-highlight justify-content-center ">
+                    <div class="p-2 bd-highlight ">
+                        <div>
+                            <p class="copyright-text ">Copyright &copy; 2020 All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous"></script>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="scripts/youtube-poster-frame.js"></script>
+</body>
+
+</html>
