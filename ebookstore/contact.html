@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Contact Page</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+</head>
+
+
+<body>
+    <main id="top">
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <header>
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4>
+                            Please complete all required fields
+                        </h4>
+                        <form name="contactForm" id="contactForm" method="POST" novalidate>
+                            <fieldset id="Contact">
+                                <legend><b>Contact Us</b></legend>
+                                <label for="fname">First Name</label><span>*</span>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name.."
+                                    required="required">
+
+                                <label for="lname">Last Name</label><span>*</span>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name.."
+                                    required="required">
+
+                                <label for="country">Country</label><span>*</span>
+                                <select id="country" name="country" required="required">
+                                    <option disabled selected value> -- select an option -- </option>
+                                    <option value="australia">Australia</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="usa">USA</option>
+                                    <option value="spain">Spain</option>
+                                    <option value="greece">Greece</option>
+                                    <option value="cuba">Cuba</option>
+                                </select>
+
+                                <label for="email">E-mail</label><span>*</span>
+                                <input type="email" name="email" placeholder="Your email.." id="email"
+                                    required="required" />
+
+                                <label for="subject">Subject</label><span>*</span>
+                                <textarea id="subject" name="subject" placeholder="Write something.."
+                                    style="height:200px" required="required"></textarea>
+                            </fieldset>
+
+                            <fieldset id="profession">
+                                <legend>You are a ...<span>*</span></legend>
+                                <input type="radio" id="student" name="profession" value="student">
+                                <label for="student">Student</label>
+                                <input type="radio" id="teacher" name="profession" value="teacher">
+                                <label for="teacher">Teacher</label>
+                                <input type="radio" id="programmer" name="profession" value="programmer">
+                                <label for="programmer">Programmer</label>
+                                <input type="radio" id="designer" name="profession" value="designer">
+                                <label for="designer">Designer</label>
+                            </fieldset>
+                            <fieldset id="newsletter">
+                                <legend>Choose subject of newsletter<span>*</span></legend>
+                                <input type="checkbox" id="javascript" value="javascript" name="newsletter[]">
+                                <label for="javascript">JavaScript</label>
+                                <input type="checkbox" id="java" value="java" name="newsletter[]">
+                                <label for="java">Java</label>
+                                <input type="checkbox" id="css" value="css" name="newsletter[]">
+                                <label for="css">CSS</label>
+                                <input type="checkbox" id="html" value="html" name="newsletter[]">
+                                <label for="html">HTML</label>
+                                <input type="checkbox" id="database" value="database" name="newsletter[]">
+                                <label for="database">DataBase</label>
+                                <input type="checkbox" id="php" value="php" name="newsletter[]">
+                                <label for="php">PHP</label>
+                            </fieldset>
+                            <button class="btn btn--solid btn--primary" type="submit" id="submitButton">Send
+                                Contact</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="push"></div>
+        <footer class="site-footer site-footer-container">
+            <div class="site-footer__section">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+
+            </div>
+            <div class="site-footer__section">
+                <h4 class="site-footer__section-heading">Team Project</h4>
+                <ul class="site-footer__list">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+                </ul>
+            </div>
+            <div class="site-footer__section">
+                <ul class="site-footer__list certifiedlogo">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/"><img src="images/john-abbott-college.png"
+                                alt="john-abbott-college"></a>
+                    </li>
+                </ul>
+                <small>&copy; JavaScript Project.<br />All Rights Reserved.<br />
+                    <a href="#">Terms</a> under which this service is provided to you.<br>
+                </small>
+            </div>
+
+        </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>

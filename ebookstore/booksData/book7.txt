@@ -1,0 +1,7 @@
+<p>JavaScript Data Structure and Algorithms</p>
+ <div>An Introducton to Understanding and</div>
+ <div>Implementing Core Data Structure and</div>
+ <div>Algorithm fandamental</div>
+  <div>5th Edition</div>
+ <div>By:Sammie Bae</div>
+ <div>price: $200</div>

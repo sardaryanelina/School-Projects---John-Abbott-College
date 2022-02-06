@@ -1,0 +1,5 @@
+<p>JAVASCRIPT & JQUERY</p>
+ <div>Interactive front-end webdevelopment</div>
+ 
+ <div>by: Jon Dekett</div>
+ <div>price: $100</div>

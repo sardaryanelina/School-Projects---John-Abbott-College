@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 2</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function() {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function() {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function() {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            JavaScript and JQuery: Interactive Front-End Web Development </h4>
+                        <br />
+                        <img class="img" src="images/2.jpg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>Jon Duckett, 2014</em>
+                            <p>
+                                Basic programming concepts - assuming no prior knowledge of programming beyond an ability to create a web page using HTML & CSS Core elements of the JavaScript language - so you can learn how to write your own scripts from scratch jQuery - which will
+                                allow you to simplify the process of writing scripts (this is introduced half-way through the book once you have a solid understanding of JavaScript) How to recreate techniques you will have seen on other web sites such
+                                as sliders, content filters, form validation, updating content using Ajax, and much more (these examples demonstrate writing your own scripts from scratch and how the theory you have learned is put into practice). As with
+                                our first book (the best-selling HTML & CSS: Design and Build Websites), each chapter: Breaks subjects down into bite-sized chunks with a new topic on each page Contains clear descriptions of syntax, each one demonstrated
+                                with inspiring code samples Uses diagrams and photography to explain complex concepts in a visual way By the end of the book, not only will you be able to use the thousands of scripts, JavaScript APIs, and jQuery plugins
+                                that are freely available on the web, and be able to customize them - you will also be able to create your own scripts from scratch. If you are looking to create more enriching web experiences, then this is the book for
+                                you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

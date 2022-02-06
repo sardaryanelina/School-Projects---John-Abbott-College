@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 6</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function () {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function () {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function () {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            Web Programming with HTML5, CSS, and JavaScript </h4>
+                        <br />
+                        <img class="img" src="images/6.jpg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>John Dean, 2019</em>
+                            <p>Web Programming with HTML 5, CSS, and JavaScript is written for the undergraduate,
+                                client-side web programming course. It covers the three client-side technologies (HTML5,
+                                CSS, and JavaScript) in depth, with no dependence on
+                                server-side technologies. One of the distinguishing features of this new text is its
+                                coverage of canvas, one of the most important new features of HTML5.
+                            </p>
+                            <p>
+                                Topics are presented in a logical, comprehensive manner and code is presented in both
+                                short code fragments and complete web pages, allowing readers to grasp concepts quickly
+                                and then apply the concepts in the context of a complete web page. Each chapter
+                                concludes with an optional case study, which builds upon itself to create a
+                                sophisticated website. The case studies allow students to apply what they have learned
+                                and gives them a feel for the real-world design process.
+                            </p>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img
+                                src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

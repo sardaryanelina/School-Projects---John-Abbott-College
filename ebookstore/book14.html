@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 14</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function() {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function() {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function() {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            Professional JavaScript® for Web Developers </h4>
+                        <br />
+                        <img class="img" src="images/14.jpg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>Matt Frisbie, 2019</em>
+                            <p>Update your skill set for ES 6 and 7 with the ultimate JavaScript guide for professional JavaScript for Web Developers is the essential guide to next-level JavaScript development. Written for intermediate-to-advanced programmers,
+                                this book jumps right into the technical details to help you clean up your code and become a more sophisticated JavaScript developer. From JavaScript-specific object-oriented programming and inheritance, to combining JavaScript
+                                with HTML and other markup languages, expert instruction walks you through the fundamentals and beyond. This new fourth edition has been updated to cover ECMAScript 6 and 7 (also known as ES2015 and ES2016) and the major
+                                re-imagination and departure from ES 5.1; new frameworks and libraries, new techniques, new testing tools, and more are explained in detail for the professional developer, with a practical focus that helps you put your
+                                new skills to work on real-world projects.
+                            </p>
+                            <p>
+                                The latest--and most dramatic--ES release is already being incorporated into JavaScript engines in major browsers; this, coupled with the rise in mobile web traffic increasing demand for responsive, dynamic web design, means that all web developers need
+                                to update their skills--and this book is your ideal resource for quick, relevant guidance.
+                            </p>
+                            <p>
+                                Get up to date with ECMAScript 6 and 7, new frameworks, and new libraries Delve into web animation, emerging APIs, and build systems Test more effectively with mocks, unit tests, functional tests, and other tools Plan your builds for future ES releases
+                                Even if you think you know JavaScript, new ES releases bring big changes that will affect the way you work. For a professional-level update that doesn't waste time on coding fundamentals, Professional JavaScript for Web
+                                Developers is the ultimate resource to bring you up to speed.
+                            </p>
+
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

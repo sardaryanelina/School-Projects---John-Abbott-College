@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Store</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="scripts/events.js" defer="defer"></script>
+    <script src="scripts/calendar.js" defer="defer"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var originalSize = $('main').css('font-size'); // reset 
+            $(".resetMe").click(function() {
+                $('main').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function() {
+                var currentSize = $('main').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('main').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function() {
+                var currentFontSize = $('main').css('font-size');
+                var currentSize = $('main').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('main').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <main id="top">
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section>
+            <header>
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial">
+                    <div class="l-container">
+                        <div class="lifestyles-interstitial__content">
+                            <h2 class="lifestyles-interstitial__slogan">
+                                Explore, read &amp; <br> buy books online
+                            </h2>
+                            <a href="books.html" class="btn btn--solid btn--primary">collection</a>
+                        </div>
+                        <div class="content-zone">
+                            <ul class="org-collections " style="display: block; ">
+
+                                <li class="insider " style="z-index: 205; ">
+                                    <div class="type-icon icon-ebook"></div>
+                                    <a href="# "><img src="images/5.jpeg " alt="Advanced JavaScript " style="max-width: 250px; "></a>
+                                </li>
+
+                                <li class="insider " style="z-index: 221; ">
+                                    <div class="type-icon icon-ebook "></div>
+                                    <a href="# "><img src="images/14.jpg " alt="JavaScript for web developers " style="max-width: 246px; "></a>
+                                </li>
+
+                                <li class="insider " style="z-index: 205; ">
+                                    <div class="type-icon icon-audiobook "></div>
+                                    <a href="# "><img src="images/6.jpg" alt="JavaScript for web developers " style="max-width: 250px; "></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="org-header ">
+
+                <h3 class="event">Upcoming Events </h3>
+                <div class="event-column">
+                    <span> <a href="#">
+                            <img src="images/book-club/1.png" alt="book-club">
+                        </a> </span>
+
+                    <span> <a href="#">
+                            <img src="images/book-club/2.png" alt="book-club">
+                        </a> </span>
+
+                    <span> <a href="#">
+                            <img src="images/book-club/3.png" alt="book-club">
+                        </a> </span>
+                    <span> <a href="#">
+                            <img src="images/book-club/4.png" alt="book-club">
+                        </a> </span>
+
+                </div>
+
+
+                <div class="lifestyles-interstitial">
+                    <h3 id="whitefont">
+                        Join us from anywhere in the world on our special events!
+                    </h3>
+                    <div id="calendar">&nbsp;</div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

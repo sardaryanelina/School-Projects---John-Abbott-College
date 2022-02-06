@@ -1,0 +1,7 @@
+<p>Simplifying JavaScript</p>
+ <div>Writing Modern JavaScript</div>
+ <div>With ES5,ES6, and Beyond</div>
+ <div>Algorithm fandamental</div>
+  
+ <div>By: Joe Morgan</div>
+ <div>price: $150</div>

@@ -1,0 +1,6 @@
+<p>Advanced JavaScript </p>
+<div>Speed up web development with the powerful </div>
+<div>features and benefits of JavaScript</div>
+<div?>1st Edition</div>
+<div>By: Zachary Shute</div>
+ <div>price: $50</div>

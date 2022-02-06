@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 12</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function() {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function() {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function() {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            Rediscovering JavaScript: Master ES6, ES7, and ES8
+                        </h4>
+                        <br />
+                        <img class="img" src="images/12.jpg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>Venkat Subramaniam, 2018</em>
+                            <p>JavaScript is no longer to be feared or loathed - the world's most popular and ubiquitous language has evolved into a respectable language. Whether you're writing frontend applications or server side code, the phenomenal features
+                                from ES6 and beyond - like the rest operator, generators, destructuring, object literals, arrow functions, modern classes, promises, async, and metaprogramming capabilities - will get you excited and eager to program with
+                                JavaScript. You've found the right book to get started quickly and dive deep into the essence of modern JavaScript. Learn practical tips to apply the elegant parts of the language and the gotchas to avoid.
+                            </p>
+                            <p>
+                                JavaScript is a black swan that no one, including the author of the language, thought would become a popular and ubiquitous language. Not long ago, it was the most hated and feared language you could use to program the web. JavaScript ES6 and beyond has
+                                gone through a significant makeover. Troublesome features have been replaced with better, elegant, more reliable alternatives. This book includes many practical examples and exercises to help you learn in depth. It will
+                                not bore you with idiosyncrasies and arcane details intended for bad interview questions. Instead, it takes you into key features that you can readily use in your day-to-day projects.
+                            </p>
+                            <p>
+                                Whether you program the frontend or the server side, you can now write concise, elegant, and expressive JavaScript with newer features like default parameters, template literals, rest and spread operators, destructuring, arrow functions, and generators.
+                                Take it up a notch with features like infinite series, promises, async, and metaprogramming to create flexible, powerful, and extensible libraries. While the evolved features of the language will draw you in, the hundreds
+                                of examples in this book will pin the concepts down, for you to use on your projects. Take command of modern JavaScript and unlock your potential to create powerful applications.
+                            </p>
+
+                            <h4>What You Need:</h4>
+                            <ul>
+                                <li>To try out the examples in the book you will need a computer with Node.js, a text editor, and a browser like Chrome installed in it.</li>
+                            </ul>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 7</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function() {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function() {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function() {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            JavaScript Data Structures and Algorithms: An Introduction to Understanding and Implementing Core Data Structure and Algorithm Fundamentals </h4>
+                        <br />
+                        <img class="img" src="images/7.jpg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>Sammie Bae, 2019</em>
+                            <p>Explore data structures and algorithm concepts and their relation to everyday JavaScript development. A basic understanding of these ideas is essential to any JavaScript developer wishing to analyze and build great software
+                                solutions.
+                            </p>
+                            <p>
+                                You'll discover how to implement data structures such as hash tables, linked lists, stacks, queues, trees, and graphs. You'll also learn how a URL shortener, such as bit.ly, is developed and what is happening to the data as a PDF is uploaded to a webpage.
+                                This book covers the practical applications of data structures and algorithms to encryption, searching, sorting, and pattern matching.
+                            </p>
+                            <p>
+                                It is crucial for JavaScript developers to understand how data structures work and how to design algorithms. This book and the accompanying code provide that essential foundation for doing so. With JavaScript Data Structures and Algorithms you can start
+                                developing your knowledge and applying it to your JavaScript projects today.
+                            </p>
+                            <h4>What You'll Learn</h4>
+                            <ul>
+                                <li>Review core data structure fundamentals: arrays, linked-lists, trees, heaps, graphs, and hash-table
+                                </li>
+                                <li>Review core algorithm fundamentals: search, sort, recursion, breadth/depth first search, dynamic programming, bitwise operators
+                                </li>
+                                <li>Examine how the core data structure and algorithms knowledge fits into context of JavaScript explained using prototypical inheritance and native JavaScript objects/data types</li>
+                                <li>Take a high-level look at commonly used design patterns in JavaScript.
+                                </li>
+                            </ul>
+                            <h4>Who This Book Is For</h4>
+                            <ul>
+                                <li>Existing web developers and software engineers seeking to develop or revisit their fundamental data structures knowledge; beginners and students studying JavaScript independently or via a course or coding bootcamp.</li>
+                            </ul>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

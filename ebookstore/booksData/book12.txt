@@ -1,0 +1,7 @@
+<p>Rediscovering Java Script</p>
+ <div>Building Cross_Platform Applications with </div>
+ <div>Master E56, E57, E58</div>
+ <div>1st Edition</div>
+ <div>By: Venkat Subramaniam</div>
+ 
+ <div>price: $60</div>

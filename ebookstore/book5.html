@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 5</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function () {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function () {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function () {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            JavaScript Everywhere: Building Cross-Platform Applications with GraphQL, React, React
+                            Native, and Electron </h4>
+                        <br />
+                        <img class="img" src="images/5.jpeg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>Adam D. Scott, 2020</em>
+                            <p>JavaScript is the little scripting language that could. Once used chiefly to add
+                                interactivity to web browser windows, JavaScript is now a primary building block of
+                                powerful and robust applications. In this practical book,
+                                new and experienced JavaScript developers will learn how to use this language to create
+                                APIs as well as web, mobile, and desktop applications. Author and engineering leader
+                                Adam D. Scott covers technologies such as Node.js,
+                                GraphQL, React, React Native, and Electron. Ideal for developers who want to build full
+                                stack applications and ambitious web development beginners looking to bootstrap a
+                                startup, this book shows you how to create a single
+                                CRUD-style application that will work across several platforms.
+
+                            </p>
+                            <h4>What You'll Learn</h4>
+                            <ul>
+                                <li>Explore GraphQL's simple process for querying data</li>
+                                <li>Learn about shared authentication for APIs, web apps, and native applications</li>
+                                <li>Build performant web applications with React and Styled Components</li>
+                                <li>Use React Native to write cross-platform applications for iOS and Android that
+                                    compile to native code
+                                </li>
+                                <li>
+                                    Learn how to write desktop applications with Electron
+                                </li>
+                            </ul>
+
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img
+                                src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

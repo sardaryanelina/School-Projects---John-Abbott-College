@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book 9</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function() {
+            var originalSize = $('article').css('font-size'); // reset 
+            $(".resetMe").click(function() {
+                $('article').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function() {
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('article').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function() {
+                var currentFontSize = $('article').css('font-size');
+                var currentSize = $('article').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('article').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <h4 class="books-subject">
+                            Simplifying JavaScript: Writing Modern JavaScript with ES5, ES6, and Beyond</h4>
+                        <br />
+                        <img class="img" src="images/9.jpg" alt="JavaScript" />
+                        <div class="book-description">
+                            <em>Joe Morgan, 2018</em>
+                            <p>The best modern JavaScript is simple, readable, and predictable. Learn to write modern JavaScript not by memorizing a list of new syntax, but with practical examples of how syntax changes can make code more expressive. Starting
+                                from variable declarations that communicate intention clearly, see how modern principles can improve all parts of code. Incorporate ideas with curried functions, array methods, classes, and more to create code that does
+                                more with less while yielding fewer bugs.
+                            </p>
+                            <p>
+                                It's time to write JavaScript code that's clean and expressive. Modern JavaScript is simpler and more predictable and readable than ever. Discover how to write better code with clear examples using principles that show how updated syntax can make code
+                                better with fewer bugs. Starting from the ground up, learn new syntax (or how to reuse older syntax) to transform code from clunky bug-susceptible scripts to clear and elegant programs that are easy to read and easy to
+                                extend.
+
+                            </p>
+                            <p>
+                                Create a foundation for readable code with simple variable declarations that reduce side effects and subtle bugs. Select collections with clear goals instead of defaulting to objects or arrays. See how to simplify iterations from complex loops to single
+                                line array methods. Master techniques for writing flexible and solid code ranging from high-order functions, to reusable classes, to patterns for architecting large applications creating applications that will last while
+                                through rounds of refactoring and changing requirements. The best part is there's no need to read this book straight through. Jump around and incorporate new functionality at will. Most importantly, understand not just
+                                what the new syntax is, but when and how to use it. Start writing better code from the first page.
+
+                            </p>
+
+                            <h4>What You Need:</h4>
+                            <ul>
+                                <li>For the best experience, have the latest version of Node installed (at least version 7). You can test most examples in the console of Chrome or other modern web browser. If you'd like to run the tests, you'll also need
+                                    to install the latest version of Node Package Manager (npm).</li>
+                            </ul>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

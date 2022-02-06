@@ -1,0 +1,7 @@
+<p>JavaScript EveryWhere</p>
+ <div>Building Cross_Platform Applications with </div>
+ <div>GraphQL, React ,React Native, and Electron</div>
+ <div>5th Edition</div>
+ <div>Adam D.Scott</div>
+ 
+ <div>price: $150</div>

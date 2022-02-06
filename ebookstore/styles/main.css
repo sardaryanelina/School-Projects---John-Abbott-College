@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+/* Basic styles to be used with all devices and under all conditions */
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+    display: block;
+}
+
+address,
+article,
+aside,
+blockquote,
+body,
+cite,
+div,
+dl,
+dt,
+dd,
+em,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h6,
+header,
+html,
+img,
+li,
+main,
+nav,
+nav a,
+ol,
+p,
+section,
+span,
+ul,
+table,
+tr,
+td,
+th,
+col,
+colgroup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-width: 320px;
+    margin-top: 60px;
+    background-color: white;
+}
+
+.l-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.push {
+    min-height: 221px;
+    margin-bottom: 50px;
+}
+
+a,
+a:link,
+a:hover,
+a:active {
+    color: #006595;
+    text-decoration: none;
+}
+
+
+/* fixed header*/
+
+.fixedHeader {
+    background: white;
+    min-width: 320px;
+    padding: 12px 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #e3e3e3;
+    height: 60px;
+    -moz-transition: all ease 200ms;
+    -o-transition: all ease 200ms;
+    -webkit-transition: all ease 200ms;
+    transition: all ease 200ms;
+    z-index: 6;
+    box-sizing: border-box;
+}
+
+.logo {
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: 34px;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    float: right;
+    padding: 0;
+    height: 100%;
+    line-height: 100%;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    background: transparent;
+    font-size: 14px;
+    margin-left: 5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #70cde3;
+    text-decoration: none;
+    height: 100%;
+    line-height: 33px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.navItem a {
+    color: #6d6e71;
+    display: inline-block;
+    padding: 0 8px;
+    height: 100%;
+}
+
+h1 {
+    line-height: 1.2;
+    text-align: center;
+    opacity: 1;
+    font-weight: normal;
+    text-align: center;
+    color: #006693;
+    opacity: 1;
+    font-size: 3.2em;
+    margin: 3rem 0rem 0.375rem;
+    padding-top: 20px;
+    font-family: "Rancho", cursive;
+}
+
+h2 {
+    font-size: 27px;
+    font-size: 2.2rem;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #006693;
+    margin: 0 auto 60px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h4 {
+    color: #fff;
+}
+
+.lifestyles {
+    position: relative;
+    font-size: 16px;
+    font-size: 1.6rem;
+    background-color: #f0f0f0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    -webkit-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+.lifestyles-interstitial {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    text-align: center;
+    cursor: default;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
+    display: table;
+    z-index: 5;
+    background: rgb(0, 102, 147);
+    background: linear-gradient( 180deg, rgba(0, 102, 147, 1) 0%, rgba(0, 102, 147, 1) 60%, rgba(168, 203, 218, 1) 86%, rgba(255, 255, 255, 1) 100%);
+}
+
+.lifestyles-interstitial .l-container {
+    text-align: center;
+}
+
+.l-container {
+    max-width: 1225px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.lifestyles-interstitial__content {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 76px 0;
+    width: 46%;
+    max-width: 520px;
+}
+
+.lifestyles-interstitial__slogan {
+    font-weight: 400;
+    text-shadow: none;
+    padding: 20px 20px 50px 0;
+    font-size: 2.8rem;
+    margin-top: 0;
+    text-align: left;
+    color: white;
+}
+
+.lifestyles-interstitial__content .btn--solid.btn--primary {
+    padding: 15px 70px;
+    display: inline;
+    margin: 30px 0 0 0;
+}
+
+.lifestyles .btn--primary,
+input[type="submit"] {
+    font-size: 21px;
+}
+
+.btn--solid.btn--primary,
+input[type="submit"] {
+    background-color: #ee523b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+.btn {
+    font-weight: 400;
+    text-align: center;
+    -moz-transition: background-color 0.1s, border-color 0.1s, color 0.1s;
+    -o-transition: background-color 0.1s, border-color 0.1s, color 0.1s;
+    -webkit-transition: background-color 0.1s, border-color 0.1s, color 0.1s;
+    transition: background-color 0.1s, border-color 0.1s, color 0.1s;
+}
+
+.lifestyles-interstitial .l-container .content-zone {
+    display: inline-block;
+    text-align: center;
+    padding: 40px 0 0 0;
+    width: 50%;
+}
+
+.org-collections img:hover {
+    max-width: 220px !important;
+    box-shadow: 5px 5px 35px #000;
+}
+
+.org-collections img {
+    width: 100%;
+    max-width: 150px;
+    box-shadow: 1px 1px 5px #333;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.org-collections {
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.org-collections .insider {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -27px;
+    position: relative;
+}
+
+#whitefont {
+    margin-top: 20px;
+    color: white;
+    font-weight: 200;
+    font-size: 1.8em;
+}
+
+p,
+li {
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+}
+
+div.books {
+    margin: 30px 46px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 208px;
+}
+
+div.books:hover {
+    border: 1px solid #777;
+}
+
+div.books img {
+    margin: 0;
+    padding: 0;
+    width: 206px;
+    height: 247px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.5em;
+    font-weight: normal;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* YL: add style for email input */
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+form {
+    font-size: 12px;
+    font-size: 1.4rem;
+    padding-top: 19.2px;
+    padding-bottom: 19.2px;
+    color: oldlace;
+}
+
+
+/* middle container */
+
+.org-header {
+    font-size: 1em;
+    padding-bottom: 20px;
+}
+
+.org-header h3 {
+    text-align: center;
+    font-size: 37px;
+    color: #006693;
+    margin-bottom: 20px;
+}
+
+.org-findout {
+    display: block;
+    width: 32%;
+    margin: 0 5px;
+    text-align: center;
+    min-width: 367px;
+    float: left;
+    position: relative;
+}
+
+.org-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #006693;
+    margin-bottom: 50px;
+}
+
+.org-findout img {
+    border-radius: 50%;
+}
+
+
+/* Calendar style */
+
+div#calendar {
+    width: 60%;
+    margin: 30px auto 10px;
+}
+
+#calendar_table {
+    background-color: rgb(231, 231, 231);
+    font-size: 0.9em;
+    width: 100%;
+    box-shadow: rgb(51, 51, 51) 0px 0px 1px, rgb(51, 51, 51) 0px 0px 5px, rgb(51, 51, 51) 0px 0px 10px, rgb(51, 51, 51) 0px 0px 20px;
+}
+
+#calendar_table caption {
+    caption-side: top;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 1.6em;
+    letter-spacing: 0.3em;
+    color: #fff;
+}
+
+.calendar_weekdays {
+    background-color: rgb(0, 102, 147);
+    width: 14.28%;
+    font-size: 1em;
+    border-bottom: 3px solid rgb(141, 75, 75);
+    color: #fff;
+}
+
+.calendar_dates {
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.8em;
+    padding: 3px;
+    border: 1px dotted gray;
+    background-color: white;
+    height: 20px;
+}
+
+#calendar_today {
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(253, 159, 146);
+    border: 1px solid rgb(61, 4, 4);
+}
+
+
+/* footer*/
+
+.site-footer-container {
+    background: rgba(6, 35, 64, 0.85);
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.site-footer {
+    margin-left: -12px;
+    margin-right: -12px;
+    overflow: hidden;
+    *zoom: 1;
+    font-size: 1rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.site-footer__section {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 12px;
+    padding-right: 12px;
+    position: relative;
+}
+
+.site-footer__section-heading {
+    margin: 0px 0px 9.6px;
+    margin: 0rem 0rem 0.6rem;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.site-footer__list {
+    list-style: none;
+    margin: 0rem 0rem 1.2rem;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.site-footer__list li {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.site-footer a,
+.site-footer a:link,
+.site-footer a:hover,
+.site-footer a:active {
+    color: #70cde3;
+    text-decoration: none;
+}
+
+.site-footer__section {
+    float: left;
+    width: 25%;
+}
+
+.certifiedlogo img {
+    width: 280px;
+}
+
+small {
+    text-align: right;
+}
+
+
+/* YL: add style for fieldset */
+
+fieldset {
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+
+/* YL: add style for span as required mark */
+
+span {
+    color: red;
+}
+
+
+/* YL: add style for message */
+
+.error {
+    color: rgba(245, 40, 21, 0.7);
+    font-style: italic;
+    font-size: 0.7em;
+}
+
+
+/* tooltip */
+
+.books-subject {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+.tooltiptext {
+    font-size: 20px;
+    visibility: hidden;
+    width: 300px;
+    background-color: rgb(1, 45, 87);
+    opacity: 0.9;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 100;
+}
+
+.books:hover .tooltiptext {
+    visibility: visible;
+}
+
+.event-column {
+    text-align: center;
+    margin: 50px auto;
+    margin-top: 0px;
+}
+
+.event-column img {
+    padding: 40px;
+}
+
+h3.event {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 100px;
+    color: #ee523b;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h5 {
+    float: left;
+    padding-left: 10%;
+    font-size: 1.4em;
+}
+
+#date {
+    padding-bottom: 20px;
+    color: #3e88a1;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+.img {
+    float: left;
+    width: 200px;
+    margin: 15px;
+    margin-right: 40px;
+    margin-bottom: 280px;
+}
+
+.book-description {
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.section-header {
+    padding-top: 30px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    font-size: 1.8em;
+}

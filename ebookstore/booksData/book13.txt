@@ -1,0 +1,6 @@
+<p>HTML5 and JavaScript Projects</p>
+ <div>Build on your Basic Knowledge of HTML5</div>
+ <div>and JavaScriptto Create Substantial HTML5 Applications</div>
+  <div>Second Edition</div>
+ <div>by: Jenin Meyer</div>
+ <div>price: $200</div>

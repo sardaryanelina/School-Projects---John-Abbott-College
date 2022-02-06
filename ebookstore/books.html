@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - eBook Store</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <!-- jquery cdn link-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            for (let i = 1; i <= 15; i++) {
+                $(`#book${i}`).hover(function () {
+                    $(".tooltiptext").show();
+                    $('.tooltiptext').load(`booksData/book${i}.txt`);
+                })
+
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <main id="top">
+        <header class="fixedHeader">
+            <a href="index.html" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <header>
+                <h1>Books that inspire you!</h1>
+            </header>
+            <h2>
+                A single book has thousands of experiences.
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial" id="map-interstitial">
+                    <div class="l-container">
+                        <br>
+                        <h4 class="books-subject">
+                            Incredible range of your professional books!
+                        </h4>
+                        <div id="book1" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book1.html" target="_blank">
+                                <img src="images/1.jpg" alt="image1">
+                            </a>
+                            <div class="desc"> <a href="book1.html" target="_blank"> Full Stack JavaScript</a></div>
+                        </div>
+                        <div id="book2" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book2.html" target="_blank">
+                                <img src="images/2.jpg" alt="image2">
+                            </a>
+                            <div class="desc"> <a href="book2.html" target="_blank">JavaScript and JQuery</a></div>
+                        </div>
+                        <div id="book3" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book3.html" target="_blank">
+                                <img src="images/3.jpg" alt="image3">
+                            </a>
+                            <div class="desc"> <a href="book3.html" target="_blank">Learning PHP, MySQL & Js</a></div>
+                        </div>
+                        <div id="book4" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book4.html" target="_blank">
+                                <img src="images/4.jpg" alt="image4">
+                            </a>
+                            <div class="desc"> <a href="book4.html" target="_blank">Learning Web Design</a> </div>
+                        </div>
+                        <div id="book5" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book5.html" target="_blank">
+                                <img src="images/5.jpeg" alt="image5">
+                            </a>
+                            <div class="desc"> <a href="book5.html" target="_blank">JavaScript Everywhere</a></div>
+                        </div>
+                        <div id="book6" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book6.html" target="_blank">
+                                <img src="images/6.jpg" alt="image6">
+                            </a>
+                            <div class="desc"> <a href="book6.html" target="_blank">Web Programming with Js</a></div>
+                        </div>
+                        <div id="book7" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book7.html" target="_blank">
+                                <img src="images/7.jpg" alt="image7">
+                            </a>
+                            <div class="desc"> <a href="book7.html" target="_blank">JavaScript Data Structures</a>
+                            </div>
+                        </div>
+                        <div id="book8" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book8.html" target="_blank">
+                                <img src="images/8.jpg" alt="image8">
+                            </a>
+                            <div class="desc"> <a href="book8.html" target="_blank">Eloquent JavaScript</a></div>
+                        </div>
+                        <div id="book9" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book9.html" target="_blank">
+                                <img src="images/9.jpg" alt="image9">
+                            </a>
+                            <div class="desc"> <a href="book9.html" target="_blank">Simplifying JavaScript</a></div>
+                        </div>
+                        <div id="book10" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book10.html" target="_blank">
+                                <img src="images/10.jpg" alt="image10">
+                            </a>
+                            <div class="desc"><a href="book10.html" target="_blank">The Definite Guide:Js</a></div>
+                        </div>
+                        <div id="book11" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book11.html" target="_blank">
+                                <img src="images/11.jpg" alt="image11">
+                            </a>
+                            <div class="desc"><a href="book11.html" target="_blank">Advanced JavaScript</a></div>
+                        </div>
+                        <div id="book12" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book12.html" target="_blank">
+                                <img src="images/12.jpg" alt="image12">
+                            </a>
+                            <div class="desc"> <a href="book12.html" target="_blank">Rediscovering JavaScript</a></div>
+                        </div>
+                        <div id="book13" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book13.html" target="_blank">
+                                <img src="images/13.jpg" alt="image13">
+                            </a>
+                            <div class="desc"><a href="book13.html" target="_blank">HTML5 and Js Projects</a></div>
+                        </div>
+                        <div id="book14" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book14.html" target="_blank">
+                                <img src="images/14.jpg" alt="image14">
+                            </a>
+                            <div class="desc"><a href="book14.html" target="_blank">Professional JavaScript</a></div>
+                        </div>
+                        <div id="book15" class="books">
+                            <div class="tooltiptext">&nbsp;</div>
+                            <a href="book15.html" target="_blank">
+                                <img src="images/15.jpg" alt="image15">
+                            </a>
+                            <div class="desc"><a href="book15.html" target="_blank">API Dev with Node.js</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="push "></div>
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h5> <a href="#top"> Top &#8679;</a></h5>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ " target="_blank"><img
+                                src="images/john-abbott-college.png " alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; 2020 All Rights Reserved.
+
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>
