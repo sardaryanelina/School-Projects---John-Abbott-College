@@ -1,0 +1,206 @@
+{% extends "master.html.twig" %}
+
+{% block title %}Booking
+{% endblock %}
+{% block head %}
+ <script>
+    
+    function displayEndDate(){
+        let input = document.getElementById("date_start").value;
+        let ed = new Date(input) ; 
+        ed.setDate(ed.getDate() + 14);
+        
+        var dd ='' + ed.getDate();
+        var mm ='' +  (ed.getMonth() + 1);
+        var y ='' +  ed.getFullYear();
+        
+        if (mm.length < 2) 
+            mm = '0' + mm;
+        if (dd.length < 2) 
+            dd = '0' + dd;
+
+        var eds = [y, mm, dd].join('-');
+        document.getElementById("date_end").value =eds;
+    }
+    
+ </script>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h2 class="center-align teal" style="padding: 1vw;">Booking</h2>
+		<form  method="POST" style="background: white;padding:2rem;">
+            <div class="row">
+				<div class="input-field col s12 m6">
+					<i class="material-icons prefix">person</i>
+					<input class="black-text" name="firstname" type="text" value="{{userSession.firstname}}" disabled>
+					<label class="active" for="firstname">First Name</label>
+				</div>
+				<div class="input-field col s12 m6">
+					<i class="material-icons prefix">person</i>
+					<input class="black-text" name="lastname" type="text" value="{{userSession.lastname}}" disabled>
+					<label class="active" for="lastname">Last Name</label>
+				</div>
+			</div>
+			<br>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">home</i>
+                    <input name="street_address" type="text" data-length="100"  value="{{v.street_address}}" required>
+                    <label for="street_address">Address</label>
+                    <span class="helper-text red-text">{{e.address}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">location_city</i>
+                    <input name="city" type="text" data-length="100"  value="{{v.city}}" required>
+                    <label class="active" for="city">City</label>
+                    <span class="helper-text red-text">{{e.city}}</span>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">location_city</i>
+                    <input name="province" type="text" data-length="100" value="{{v.province}}">
+                    <label class="active" for="province">Province / State</label>
+                    <span class="helper-text red-text">{{e.province}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">local_post_office</i>
+                    <input name="postalcode" type="text" data-length="20"  value="{{v.postalcode}}" required>
+                    <label class="active" for="postalcode">Postal Code</label>
+                    <span class="helper-text red-text">{{e.postalcode}}</span>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">location_city</i>
+                    <input name="country" type="text" data-length="100" value="{{v.country}}" required>
+                    <label class="active" for="country">Country</label>
+                    <span class="helper-text red-text">{{e.country}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">smartphone</i>
+                    <input name="phone" type="text" data-length="15" value="{{v.phone}}" required>
+                    <label class="active" for="phone">Phone</label>
+                    <span class="helper-text red-text">{{e.phone}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <p style="display: inline-block;margin-right: 3rem;">
+                        <i class="material-icons" style="display: inline-block;padding-right: 2rem;"  >group</i>
+                        <span style="display: inline-block;text-align: center;"> Gender:</span>
+                        <span class="helper-text red-text">{{e.gender}}</span>
+                    </p>
+                    <p style="display:inline-block;margin-right: 3rem;">
+                        <label  >
+                            <input class="with-gap" name="gender" type="radio" value="male" checked />
+                            <span>Male</span>
+                        </label>
+                    </p>
+                    <p style="display: inline-block;margin-right: 3rem;">
+                        <label>
+                            <input class="with-gap" name="gender" type="radio" value="female"  />
+                            <span>Female</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">group</i>
+                    <input name="age" type="number"  value="{{v.age}}" required>
+                    <label class="active" for="age">Age</label>
+                    <span class="helper-text red-text">{{e.age}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">group</i>
+                    <input name="height" type="number" value="{{v.height}}" required>
+                    <label class="active" for="height">Height (cm)</label>
+                    <span class="helper-text red-text">{{e.height}}</span>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">group</i>
+                    <input name="weight" type="number" value="{{v.weight}}" required>
+                    <label class="active" for="weight">Weigth (kg)</label>
+                    <span class="helper-text red-text">{{e.weight}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">health_and_safety</i>
+                    <input name="insurance" type="text" value="{{v.insurance}}" required>
+                    <label class="active" for="insurance">Insurance</label>
+                    <span class="helper-text red-text">{{e.insurance}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">comment</i>
+                    <input name="comment" type="text" value="{{v.comment}}" maxlength="300">
+                    <label class="active" for="comment">Comments</label>
+                    <span class="helper-text red-text">{{e.comments}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                   <h5 class="center teal" style="padding: .5rem;">SPACESHIP CHOICE</h5>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <p style="display:inline-block;margin-right: 5rem;">
+                        <label  >
+                            <input class="with-gap" name="spaceship" type="radio" value="Dragon" checked />
+                            <span style="font-size: 2rem;font-weight: 600;">Dragon</span>
+                        </label>
+                    </p>
+                    <p style="display: inline-block;margin-right: 3rem;">
+                        <label>
+                            <input class="with-gap" name="spaceship" type="radio" value="Starship" />
+                            <span style="font-size: 2rem;font-weight: 600;">Starship</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">calendar_today</i>
+                    <input id="date_start" onchange="displayEndDate()" name="date_start" type="date"  value="{{v.date_start}}" required >
+                    <label class="active" for="date_start">Start Date</label>
+                    <span class="helper-text red-text">{{e.date_start}}</span>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">calendar_today</i>
+                    <input id="date_end" class="black-text" name="date_end" type="text" value=" {{v.date_end}}" disabled>
+                    <label class="active" for="date_end">End Date</label>
+                    <span class="helper-text red-text">{{e.date_end}}</span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col m12">
+                    <p class="right-align">
+                        <input type="hidden" name="recaptcha_response" value="" id="recaptchaResponse">
+                        <input type="submit" value="BOOK IT NOW!"
+                            style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #26A69A;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;" />
+                    </p>
+                </div>
+            </div>
+            <br>
+         </form>
+    </div>
+</div>
+{% endblock %}
+

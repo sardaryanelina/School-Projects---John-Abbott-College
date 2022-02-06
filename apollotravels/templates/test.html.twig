@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Material Icons link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Matrilize CDN CSS link -->
+    <!-- Materialize documentation: https://materializecss.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <!-- Change async to defer if needed: 
+		    https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" async></script>
+    <title>Document</title>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="waves-effect waves-light btn enableEthereumButton">Metamask wallet</button>
+
+
+    <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+    <script type="text/javascript">
+        const provider = detectEthereumProvider();
+        const ethereumButton = document.querySelector('.enableEthereumButton');
+        // var test = provider[0].pro === null ? false : true;
+
+        ethereumButton.addEventListener('click', () => {
+            //Will Start the metamask extension
+            if (typeof ethereum !== 'undefined') {
+                // handle provider
+                console.log("Metamask installed!");
+
+                ethereum.request({
+                    method: 'eth_requestAccounts'
+                });
+            } else {
+                // handle no provider
+                console.log("Please install metamask.");
+                // alert("Please install metamask: https://metamask.io/download");
+
+                if (window.confirm(
+                        'Please click on \'OK\' to start using MetaMask wallet.')) {
+                    window.location.href = 'https://metamask.io/download';
+                };
+
+            }
+        });
+    </script>
+</body>
+
+</html>

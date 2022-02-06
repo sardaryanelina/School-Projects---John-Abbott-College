@@ -1,0 +1,75 @@
+{% extends "master.html.twig" %}
+
+{% block title %}MetaMask Test
+{% endblock %}
+
+{% block content %}
+
+<div style="border: 2rem solid red; height: 50vh;">
+    <button class="waves-effect waves-light btn enableEthereumButton">Metamask wallet</button>
+    <button class="waves-effect waves-light btn enableEthereumButton2"></button>
+    <h2 style="color: white;">Account: <span class="showAccount" style="color: white;"></span></h2>
+    <h4 style="color: white;">Locked?: <span class="locked"></span></h4>
+</div>
+
+<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+<script type="text/javascript">
+    const provider = detectEthereumProvider();
+    const ethereumButton = document.querySelector('.enableEthereumButton');
+    const ethereumButton2 = document.querySelector('.enableEthereumButton2');
+    // var test = provider[0].pro === null ? false : true;
+    const showAccount = document.querySelector('.showAccount');
+    const locked = document.querySelector('.locked');
+
+    ethereumButton2.addEventListener('click', () => {
+        isLocked();
+    });
+
+    ethereumButton.addEventListener('click', () => {
+        //Will Start the metamask extension
+        if (typeof window.ethereum !== 'undefined' && ethereum.isMetaMask === true) {
+            // handle provider
+            console.log("Metamask installed!");
+
+            getAccountHandler();
+
+            ethereum.request({
+                method: 'eth_requestAccounts'
+            });
+
+        } else {
+            // handle no provider
+            console.log("Please install metamask.");
+            // alert("Please install metamask: https://metamask.io/download");
+
+            if (window.confirm(
+                    'Please click on \'OK\' to start using MetaMask wallet.')) {
+                window.location.href = 'https://metamask.io/download';
+            };
+
+        }
+    });
+
+    async function getAccountHandler() {
+        const accounts = await ethereum.request({
+            method: 'eth_requestAccounts'
+        });
+        // const account = accounts[0];
+        const account = accounts[0];
+        showAccount.innerHTML = account;
+    }
+
+    function isLocked() {
+        ethereum.getAccount(function (err, accounts) {
+            if (err != null) {
+                console.log(err)
+            } else if (accounts.length === 0) {
+                console.log('MetaMask is locked')
+            } else {
+                console.log('MetaMask is unlocked')
+            }
+        });
+    }
+</script>
+
+{% endblock %}

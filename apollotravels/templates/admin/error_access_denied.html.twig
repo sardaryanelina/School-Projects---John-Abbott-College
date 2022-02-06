@@ -1,0 +1,11 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Access denied{% endblock %}
+
+{% block content %}
+<div class="container" style="background-color: white; padding: 2rem; margin-top: 3rem !important;">
+    <h3>Access Denied</h3>
+    <p>Access denied. You must be logged in as administrator to access this page.</p>
+    <a href="/login">Click here to login as admin</a>
+</div>
+{% endblock %}

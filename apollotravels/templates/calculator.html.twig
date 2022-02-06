@@ -1,0 +1,206 @@
+{% extends "master.html.twig" %}
+
+{% block head %}
+{% endblock head %}
+
+{% block title %}Calculator
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row" id="contact">
+        <h2 class="center-align teal" style="padding: 1vw;">Calculator</h2>
+        <div class="col  s12 card-panel">
+            <div class="row">
+                <!-- ************************************** FORM HEIGHT *************************************************************** -->
+                {% if v.step == null %}
+                <h5 class="teal-text center-align flow-text " style=" margin-top: 4vh; ">Choose the
+                    height to calculate the total</h5>
+                <div class="divider"></div>
+
+                <form class="col s12 center-align" method="post" style="padding: 0 2rem;">
+                    <input type="hidden" name="step" value="1">
+                    <div class="row">
+                        <div class="input-field col s12 center-align">
+                            <div class=" row">
+                                <div class="input-field  center-align col s12" style=" margin-bottom: 4vh;">
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="height" type="radio" value="heighttoten"
+                                                checked />
+                                            <span>Height less than 11cm</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="height" type="radio" value="heighttothirty" />
+                                            <span>Height from 11 to 30cm</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="height" type="radio" value="heighttosixty" />
+                                            <span>Height from 31 to 60cm</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="height" type="radio"
+                                                value="heighttohundred" />
+                                            <span>Height from 61 to 99cm</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <p class="center-align">
+                                    <input class="btn btn-small waves-effect waves-light " type="submit" name="action"
+                                        value="Next" />
+                                </p>
+                            </div>
+                        </div>
+                </form>
+                {% elseif v.step == 1 %}
+                <!-- ******************************************** FORM WIDGHT ********************************************************* -->
+                <h5 class="teal-text center-align flow-text " style=" margin-top: 4vh; ">Choose the width to calculate
+                    the total</h5>
+                <div class="divider"></div>
+
+                <form class="col s12 center-align" method="post" style="padding: 0 2rem;">
+                    <input type="hidden" name="step" value="2">
+                    <div class="row">
+                        <div class="input-field col s12 center-align">
+                            <div class=" row">
+                                <div class="input-field col s12  center-align" style=" margin-bottom: 4vh;">
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="width" type="radio" value="widthtoten"
+                                                checked />
+                                            <span>Width less than 11cm</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="width" type="radio" value="widthtothirty" />
+                                            <span>Width from 11 to 30cm</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="width" type="radio" value="widthtosixty" />
+                                            <span>Width from 31 to 60cm</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="width" type="radio" value="widthtohundred" />
+                                            <span>Width from 61 to 99cm</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                <p class="right-align custom_button ">
+                                    <a href="/calculator"><input class="center-align" type="text" value=" GO BACK"
+                                            style=" font-weight: 600; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #88e4db;height: 2.55rem;width: 5.1rem;font-size: 1.06rem;cursor: pointer; padding-right:3px;"
+                                            disabled /></a>
+                                </p>
+                            </div>
+                            <div class="col s6">
+                                <p class="left-align">
+                                    <input class="btn btn-small waves-effect waves-light " type="submit" name="action"
+                                        value="Next" />
+                                </p>
+                            </div>
+                        </div>
+                </form>
+                {% elseif v.step == 2 %}
+                <!-- ******************************************** FORM WEIGHT ********************************************************* -->
+                <h5 class="teal-text center-align flow-text " style=" margin-top: 4vh; ">Choose the weight to calculate
+                    the total</h5>
+                <div class="divider"></div>
+
+                <form class="col s12 center-align" method="post" style="padding: 0 2rem;">
+                    <input type="hidden" name="step" value="3">
+                    <div class="row">
+                        <div class="input-field col s12 center-align">
+                            <div class=" row">
+                                <div class="input-field col s12  center-align" style=" margin-bottom: 4vh;">
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="weight" type="radio" value="weighttoten"
+                                                checked />
+                                            <span>Weight less than 11kg</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="weight" type="radio" value="weighttothirty" />
+                                            <span>Weight from 11 to 30kg</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="weight" type="radio" value="weighttosixty" />
+                                            <span>Weight from 31 to 60kg</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label style="margin: 4vh;">
+                                            <input class="with-gap" name="weight" type="radio"
+                                                value="weighttohundred" />
+                                            <span>Weight from 61 to 99kg</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s6">
+                                <p class="right-align custom_button ">
+                                    <a href="/calculator"><input class="center-align" type="text" value=" GO BACK"
+                                            style=" font-weight: 600; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #88e4db;height: 2.55rem;width: 5.1rem;font-size: 1.06rem;cursor: pointer; padding-right:3px;"
+                                            disabled /></a>
+                                </p>
+                            </div>
+                            <div class="col s6">
+                                <p class="left-align">
+                                    <input class="btn btn-small waves-effect waves-light " type="submit" name="action"
+                                        value="Next" />
+                                </p>
+                            </div>
+                        </div>
+                </form>
+                {% elseif v.step == 3 %}
+                <h5 class="teal-text center-align flow-text " style=" margin-top: 4vh; ">The total price for the
+                    delivery</h5>
+                <div class="divider" style="margin-top: 4vh;"></div>
+                <div class="row">
+                    <div class="col s12">
+                        <p class="center-align custom_button ">
+                            <input class="center-align" type="text" value=" TOTAL: {{v.sum}}"
+                                style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #88e4db;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;"
+                                disabled />
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="center-align col s6">
+                        <p><a class="teal-text" href="/calculator">Calculate again </a></p>
+                    </div>
+                    <div class="center-align col s6">
+                        <p><a class="teal-text" href="/delivery">Go to delivery page </a> </p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Materialize Icons link -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Materialize CDN CSS link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"
+		integrity="sha512-t38vG/f94E72wz6pCsuuhcOPJlHKwPy+PY+n1+tJFzdte3hsIgYE7iEpgg/StngunGszVMrRfvwZinrza0vMTA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- recaptcha -->
+	<script src="https://www.google.com/recaptcha/api.js?render=6Lew1NsaAAAAAJhqKotyf_0JOyPvBrrCOnoJiaac"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/styles.css" type="text/css">
+	<!-- java script -->
+	<script src="../scripts/script.js"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	{% block head %}{% endblock %}
+
+	<title>
+		{% block title %}{% endblock %}
+	</title>
+</head>
+
+<body>
+	<header>
+		<!-- Dropdown Structure -->
+		<ul id="dropdown1" class="dropdown-content black">
+			<li><a href="/booking">Booking</a></li>
+			<li><a href="/delivery">Delivery</a></li>
+			<li><a href="/contact">Contact Us</a></li>
+			<li class="divider"></li>
+			<li><a href="#!">SHOP</a></li>
+		</ul>
+
+		<div class="navbar-fixed ">
+			<nav class="black">
+				<div id="navbar" class="nav-wrapper bg__secondary container">
+					<!-- <a href="" class="brand-logo">logo</a> -->
+					<ul class="brand-logo">
+						<li>
+							<a href="/"><img src="/images/logo.png" width="100%"></a>
+						</li>
+					</ul>
+					<a href="#" data-target="mobile-demo" class="sidenav-trigger">
+						<i class="material-icons">menu</i>
+					</a>
+					<ul class="right hide-on-med-and-down">
+						<li>
+							<a href="/dragon">DRAGON</a>
+						</li>
+						<li>
+							<a href="/starship">STARSHIP</a>
+						</li>
+						<!-- Dropdown Trigger -->
+						<li>
+							<a class="dropdown-trigger" href="#!" data-target="dropdown1">SERVICES<i
+									class="material-icons right">arrow_drop_down</i>
+							</a>
+						</li>
+
+						{% if userSession %}
+						<li>
+							<a href="/logout">
+								<button style="padding: 0;" class="waves-effect  btn transparent navbtn" type="button"
+									name="action" value="">Sign
+									out</button>
+							</a>
+						</li>
+						{% else %}
+						<li>
+							<a href="/login">
+								<button style="padding: 0;" class="waves-effect  btn transparent navbtn" type="button"
+									name="action" value="">Sign
+									in</button>
+							</a>
+						</li>
+						<li>
+							<a href="/register">
+								<button style="padding: 0;" class="waves-effect  btn transparent navbtn" type="button"
+									name="action">Sign
+									up</button>
+							</a>
+						</li>
+						{% endif %}
+
+					</ul>
+				</div>
+				<ul>
+					<li>
+						<a href="tel:123-456-7890"><i style="position:absolute; top:0.8vh; right:14vh;" class=" material-icons
+													prefix">phone_in_talk</i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Sidebar Menu -->
+		<ul class="sidenav black " id="mobile-demo">
+			<br>
+			<li>
+				<a href="/" class="white-text  accent-1">HOME</a>
+			</li>
+			<li>
+				<a href="/dragon" class="cyan-text  accent-1">DRAGON</a>
+			</li>
+			<li>
+				<a href="/starship" class="cyan-text  accent-1">STARSHIP</a>
+			</li>
+			<li>
+				<a href="/booking" class="cyan-text  accent-1">BOOK</a>
+			</li>
+			<li>
+				<a href="/delivery" class="cyan-text  accent-1">DELIVERY</a>
+			</li>
+			<li>
+				<a href="#" class="cyan-text  accent-1">SHOP</a>
+			</li>
+			<li>
+				<a href="/contact" class="cyan-text  accent-1">CONTACT US
+				</a>
+			</li>
+
+			{% if userSession %}
+			<li>
+				<a href="/logout">
+					<button style="padding: 0;" class="waves-effect  btn transparent navbtn" type="button" name="action"
+						value="">Sign
+						out</button>
+				</a>
+			</li>
+			{% else %}
+			<li>
+				<a href="/login">
+					<button style="padding: 0;" class="waves-effect  btn transparent navbtn" type="button" name="action"
+						value="">Sign
+						in</button>
+				</a>
+			</li>
+			<li>
+				<a href="/register">
+					<button style="padding: 0;" class="waves-effect  btn transparent navbtn" type="button"
+						name="action">Sign
+						up</button>
+				</a>
+			</li>
+			{% endif %}
+		</ul>
+
+	</header>
+
+	{# Twig documentation: https://twig.symfony.com/doc/3.x/templates.html #}
+	<div id="centeredContent">
+		<section>
+			<div class="star star1"></div>
+			<div class="star star2"></div>
+			<div class="star star3"></div>
+			<div class="star star4"></div>
+			<div class="star star5"></div>
+			<div class="star star6"></div>
+			<div class="star star7"></div>
+			<div class="star star8"></div>
+		</section>
+
+		<!-- Flash messages -->
+		{% if flashMessage %}
+		<div id="flashMessage" class="teal-text center-align">
+			<h5>{{flashMessage}}</h5>
+		</div>
+		{% endif %}
+
+		{% block content %}{% endblock %}
+	</div>
+	<footer class="page-footer black row" style="margin-bottom:0; padding-bottom:1rem; position: fixed;
+		margin-bottom: 0;">
+		<div class="footer-copyright black col s12" style="height: auto;">
+			<div class="container">
+				Apollo Travels © 2021
+				<a href="#!" class="white-text right" style="margin-right: 1.5rem;">PRIVICY POLICY</a>
+				<a href="#!" class="white-text right" style="margin-right: 1.5rem;">LINKEDIN</a>
+				<a href="#!" class="white-text right" style="margin-right: 1.5rem;">TWITTER</a>
+				<a href="#!" class="white-text right" style="margin-right: 1.5rem;">YOUTUBE</a>
+				{% if userSession.type == 1 %}
+				<a href="/admin" class="white-text right" style="margin-right: 1.5rem;">ADMIN</a>
+				{% endif %}
+			</div>
+		</div>
+	</footer>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+		integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- hamburger menu -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var elems = document.querySelectorAll('.sidenav');
+			var instances = M.Sidenav.init(elems, {});
+		});
+	</script>
+
+	<!-- dropdown menu -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var drop = document.querySelectorAll('.dropdown-trigger');
+			M.Dropdown.init(drop, {
+				coverTrigger: false
+			});
+		});
+	</script>
+
+	{% block bottom %}{% endblock %}
+
+</body>
+
+</html>

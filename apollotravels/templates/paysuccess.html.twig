@@ -1,0 +1,35 @@
+{% extends "master.html.twig" %}
+
+{% block title %}Payment Success
+{% endblock %}
+
+{% block content %}
+<div class="container white" style="padding: 3vw;font-size: 2rem;width: 50vw;margin-top: 2vw; ">
+    <div class="row">
+        <div class="col s12 center">
+            <i class="material-icons teal-text" style="font-size: 8rem;">paid</i>
+            <h3>Payment Complete</h3>
+            <br>
+            <p>Thank you, your payment has been successful. A confirmation email has been sent to <b>{{userSession.email}}</b></p>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 5rem;">
+        <div class="col s12 center">
+            <h5><b>ORDER REFERENCE</b></h5>
+            <div class="col s12">
+                <h5>{{confirm}}</h5>
+            </div>
+        </div>
+    </div>
+      <div class="row" style="margin-top: 5rem;">
+        <div class="col m12">
+            <form action="/">
+                <p class="center-align custom_button"><input type="submit" value="DONE"
+                    style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #26A69A;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;" />
+                </p>
+            </form>
+            
+        </div>
+    </div>
+ </div>
+{% endblock content %}

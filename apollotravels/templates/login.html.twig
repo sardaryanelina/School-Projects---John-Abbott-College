@@ -1,0 +1,59 @@
+{% extends "master.html.twig" %}
+
+{% block title %}Login
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row" id="login">
+		<h2 class="center-align teal" style="padding: 1vw;">Sign in</h2>
+		<form method="POST" style="background: white;padding:2rem;">
+			{% if error %}
+			<p class="errorMessage" style="color: red;">Invalid username or password. Try again or
+				<a href="/register">Register</a>.
+			</p>
+			{% endif %}
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">mail_outline</i>
+					<input name="email" type="email" value="{{v.email}}" required>
+					<label for="email">Email</label>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">lock_outline</i>
+					<input name="password" id="password_login" type="password" value="{{v.password}}" required>
+					<label for="password">Password</label>
+					<span id="p3">
+						<span onclick="showPassword2()" class="field-icon material-icons">visibility</span>
+					</span>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col m12">
+					<p class="right-align custom_button"><input type="submit" value=" LOGIN "
+							style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #26A69A;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;" />
+					</p>
+				</div>
+			</div>
+			<div class="row" style="font-size: 2rem;">
+				<div class="input-field col s6 m6 l6">
+					<p class="margin medium-small">
+						{% set myURL = '/register' %}
+						<a class="teal-text" href="{{myURL}}">Register Now!</a>
+					</p>
+				</div>
+				<div class="input-field col s6 m6 l6">
+					<p class="margin right-align medium-small">
+						<a class="teal-text" href="/contact">Forgot password?</a>
+					</p>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<script src="../scripts/script.js"></script>
+{% endblock %}

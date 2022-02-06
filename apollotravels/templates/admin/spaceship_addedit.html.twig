@@ -1,0 +1,73 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Update Customer Info{% endblock %}
+
+{% block content %}
+
+{# {% if errorList %}
+        <ul class="errorMessage">
+            {% for error in errorList %}
+            <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %} #}
+
+<div class="container" style="background-color: white; padding: 2rem; margin-top: 3rem !important;">
+    <div><a href="/admin"><i class="material-icons teal-text">arrow_back</i></a></div>
+    <h3 style="margin-bottom: 4rem;">{% if op == 'edit' %}Edit {% else %}Add {% endif %}Spaceship</h3>
+
+
+    <form method="post">
+
+        {% if op == 'edit' %}
+
+        <div class="row">
+            <div class="col s3">
+                <label for="disabled">ID</label>
+                <input disabled value="{{s.id}}" id="disabled" type="text" class="validate" name="id">
+            </div>
+            <div class="col s3">
+                <label for="weight">Weight Capacity: </label>
+                <input type="number" id="weight" name="weight" value="{{s.weight_capacity}}">
+                <span class="errorMessage red-text">{{errorList.weight_capacity}}</span><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" value="{{s.name}}">
+                <span class="errorMessage red-text">{{errorList.name}}</span><br>
+            </div>
+        </div>
+
+
+        {% else %}
+
+
+        <div class="row">
+            <div class="col s3">
+                <label for="weight">Weight Capacity: </label>
+                <input type="number" id="weight" name="weight" value="{{s.weight_capacity}}">
+                <span class="errorMessage red-text">{{errorList.weight_capacity}}</span><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s9">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" value="{{s.name}}">
+                <span class="errorMessage red-text">{{errorList.name}}</span><br>
+            </div>
+        </div>
+
+
+        {% endif %}
+
+        <input class="waves-effect waves-light btn" type="submit"
+            value="{% if op == 'edit' %}Edit Spaceship{% else %}Add Spaceship{% endif %}">
+
+    </form>
+</div>
+
+{% endblock %}

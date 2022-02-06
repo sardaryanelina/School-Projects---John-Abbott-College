@@ -1,0 +1,46 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Update Admin Info{% endblock %}
+
+{% block content %}
+
+{# {% if errorList %}
+        <ul class="errorMessage">
+            {% for error in errorList %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %} #}
+
+<div class="container" style="background-color: white; padding: 2rem; margin-top: 3rem !important;">
+    <form method="post">
+        <label for="fn">{% if type == 'admin' %}Admininistrator's{% else %}User's{% endif %} firstname: </label>
+        <input type="text" id="fn" name="firstname" value="{{u.firstname}}"><br>
+        <span class="errorMessage red-text">{{errorList.firstname}}</span><br>
+        <label for="ln">{% if type == 'admin' %}Admininistrator's{% else %}User's{% endif %} lastname: </label>
+        <input type="text" id="ln" name="lastname" value="{{u.lastname}}"><br>
+        <span class="errorMessage red-text">{{errorList.lastname}}</span><br>
+        <label for="email">{% if type == 'admin' %}Admininistrator's{% else %}User's{% endif %} email: </label>
+        <input type="email" id="email" name="email" value="{{u.email}}"><br>
+        <span class="errorMessage red-text">{{errorList.email}}</span><br>
+        {# {% if op == 'edit' %}
+        FIXME
+        <label for="created">Admin created date: </label>
+        <input type="date" id="created" name="created" value="{{a.created}}"><br>
+        {% endif %} #}
+        <label for="pw1">{% if type == 'admin' %}Admininistrator's{% else %}User's{% endif %} password: </label><br>
+        {% if op == 'edit' %}
+        <p style="background-color: yellow; display: inline-block; width: auto; font-size: .8rem;">
+            (Only provide password if you're changing it for this administrator)</p><br>
+        {% endif %}
+        <input type="password" id="pw1" name="pass1"><br>
+        <span class="errorMessage red-text">{{errorList.password}}</span><br>
+        <label for="pw1">Confirm password: </label>
+        <input type="password" id="pw2" name="pass2"><br>
+        <span class="errorMessage red-text">{{errorList.password_confirm}}</span><br>
+        <input class="waves-effect waves-light btn" type="submit"
+            value="{% if op == 'edit' %}{% if type == 'admin' %}Update admin{% else %}Update user{% endif %}{% else %}{% if type == 'admin' %}Add admin{% else %}Add user{% endif %}{% endif %}">
+    </form>
+</div>
+
+{% endblock %}

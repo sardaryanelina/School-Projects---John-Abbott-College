@@ -1,0 +1,10 @@
+{
+    "require": {
+        "slim/slim": "^3.12",
+        "slim/twig-view": "^2.5",
+        "twig/twig": "v2.14",
+        "sergeytsalkov/meekrodb": "^2.3",
+        "monolog/monolog": "^2.2",
+        "stripe/stripe-php": "^7.79"
+    }
+}

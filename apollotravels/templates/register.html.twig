@@ -1,0 +1,100 @@
+{% extends "master.html.twig" %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	//ajax email validation
+	$(document).ready(function () { // alert("jQuery works");
+		$('input[name=email]').on('paste blur change input', function () {
+			var email = $('input[name=email]').val();
+			$("#emailTaken").load("/isemailtaken/" + email);
+		});
+
+		$(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+			console.log("Ajax error occured on " + settings.url);
+			alert("Ajax error occured");
+		});
+	});
+	// recaptcha
+	grecaptcha.ready(function () {
+		grecaptcha.execute('6Lew1NsaAAAAAJhqKotyf_0JOyPvBrrCOnoJiaac', { action: 'submit' }).then(function (token) {
+			var recaptchaResponse = document.getElementById('recaptchaResponse');
+			recaptchaResponse.value = token;
+		});
+	});
+</script>
+{% endblock %}
+
+{% block title %}Registration
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div id="register_page" class="row">
+		<h2 class="center-align teal" style="padding: 1vw;">Sign up</h2>
+		<div class="col s12 z-depth-6 card-panel">
+			<form class="register_form" method="POST" style="padding: 2rem;">
+				<div class="row">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">person_outline</i>
+						<input name="firstname" type="text" data-length="150" value="{{v.firstname}}" required>
+						<label class="active" for="firstname">First Name</label>
+						<span class="helper-text red-text">{{e.firstname}}</span>
+					</div>
+					<div class="input-field col s6">
+						<i class="material-icons prefix">person_outline</i>
+						<input name="lastname" type="text" data-length="150" value="{{v.lastname}}" required>
+						<label class="active" for="lastname">Last Name</label>
+						<span class="helper-text red-text">{{e.lastname}}</span>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">mail_outline</i>
+						<input name="email" type="email" value="{{v.email}}" required>
+						<label for="email">Email</label>
+						<span id="emailTaken" class="helper-text red-text">{{e.email}}</span>
+						<span class="errorMessage red-text"></span>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">lock_outline</i>
+						<input name="password" id="password" type="password" value="{{v.password}}" required>
+						<label for="password">Password</label>
+						<span id="p1">
+							<span onclick="showPassword()" class="field-icon material-icons">visibility</span>
+						</span>
+						<span class="helper-text red-text">{{e.password}}</span>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">lock_outline</i>
+						<input name="password_confirm" id="password_confirm" type="password"
+							value="{{v.password_confirm}}" required>
+						<label for="password_confirm">Confirm Password</label>
+						<span id="p2">
+							<span onclick="showPassword1()" class="field-icon material-icons">visibility</span>
+						</span>
+						<span class="helper-text red-text">{{e.password_confirm}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col m12">
+						<p class="right-align">
+							<input type="hidden" name="recaptcha_response" value="" id="recaptchaResponse">
+							<input type="submit" value="REGISTER NOW!"
+								style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #26A69A;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;" />
+						</p>
+					</div>
+				</div>
+				<br>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "master.html.twig" %}
+
+{% block title %}Sign up success{% endblock title %}
+{% block head %}
+<script>
+    // Example of redirection with visual countdown
+    var secsLeft = 5;
+    setInterval(function () {
+        document.getElementById("countdown").innerHTML = secsLeft + "";
+        secsLeft--;
+        if (secsLeft < 0) {
+            window.location.href = "/login"; // destination
+        }
+    }, 1000);
+</script>
+{% endblock head %}
+
+{% block content %}
+<div class="container white-text center-align" style="margin-top: 8rem;">
+    <h5 class="white-text">Sign up was successful.</h5>
+    <h6>You will be automatically redirected to Sign in <span id="countdown">5</span> seconds.</h6>
+    <div>
+        <p><a class="teal-text" href="/login">Click here </a> to go to login.</p>
+    </div>
+</div>
+{% endblock content %}

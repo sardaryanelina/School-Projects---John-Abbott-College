@@ -1,0 +1,423 @@
+2021/05/11 Elina
+1. What I have done / not done since last Scrum?
+	- Discussed and prepared project proposal
+	- Created mockup for the landing page
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Start database structure
+	- Research on materialise vs bootstrap
+3. Where do I need assistance? What do I need to figure out?
+	- Animations
+
+2021/05/11 Anastassia
+1. What I have done / not done since last Scrum?
+	- Discussed and prepared project proposal
+	- Created Trello board
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Start project structure (folders/files/...)
+3. Where do I need assistance? What do I need to figure out?
+	- Slim tutorial
+	
+2021/05/11 Emma
+1. What I have done / not done since last Scrum?
+	- Discussed and prepared project proposal
+	- Created repo
+	- Created project doc
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Start database structure
+	- Work on user stories
+	- Catch up on class
+3. Where do I need assistance? What do I need to figure out?
+	- Crypto wallet API
+
+---------------------------------------------------------------------------------------
+
+2021/05/12 Elina
+1. What I have done / not done since last Scrum?
+    - Learned about Materialize
+    - Got familiar with some of PHP libraries
+    - Made background animation of stars effect
+    - Created logotype/logomark for Apollo Travels
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Start database structure
+    - Research more on PHP and learn more about PHP libraries
+3. Where do I need assistance? What do I need to figure out?
+    - Animations of stars/glitch/JS?
+
+2021/05/12 Anastassia
+1. What I have done / not done since last Scrum?
+	- Start project structure (folders/files/...) - done
+	- Login page HTML
+	- Register page HTML
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- PHP code for the Register page
+	- PHP code for the Login page
+3. Where do I need assistance? What do I need to figure out?
+	- Error handling with PHP Slim
+	
+2021/05/12 Emma
+1. What I have done / not done since last Scrum?
+	- Research on animated background / found snippets
+	- Research on how to integrate web3 with metamask in Dapp
+	- Read on MeekroDb, Slim, Packagist, Composer, Twig and Metamask (web3) integration
+	- Practiced in temp.html.twig with Twig syntax
+	- Fixed 404 styles.css error
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Database structure
+	- Export db file to team members
+	- Start nav and footer templates
+	- Work on user stories
+3. Where do I need assistance? What do I need to figure out?
+	- Crypto wallet API - > convert JS code from tutorial to php code...
+
+---------------------------------------------------------------------------------------
+
+2021/05/13 Elina
+1. What I have done / not done since last Scrum?
+    - PHP code for the Contact Page
+    - More research on Materialize and PHP libraries
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Research more on PHP and learn more about PHP libraries
+    - Work on validations
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+	
+	2021/05/13 Anastassia
+1. What I have done / not done since last Scrum?
+	- PHP for the Register page with input validation(no input to db yet)
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- PHP code for the Register page - DB input - transfer to main page
+	- PHP code for the Login page
+3. Where do I need assistance? What do I need to figure out?
+	- show password with JS
+	
+2021/05/13 Emma
+1. What I have done / not done since last Scrum?
+	- Research on css animation continuous loop
+	- Research on how to integrate web3 with metamask in Dapp
+	- web3 integration
+	- Started coding JS for web3 implementation
+	- Fixed 404 script.js
+	- Created database + export
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Start nav and footer templates
+	- Read on metamask migration - npm for web3
+3. Where do I need assistance? What do I need to figure out?
+	- Can't translate to php, metamask only works with JS library for web3
+	- Metamask migration for web3 really hard to grasp... tag outside module?
+
+---------------------------------------------------------------------------------------
+
+2021/05/14 Elina
+1. What I have done / not done since last Scrum?
+    - Work on contact page
+    - Work on navigation bar and footer
+    - Synchronize some CSS styles and Materialize
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Research more on PHP and learn more about PHP libraries
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+
+2021/05/14 Anastassia
+1. What I have done / not done since last Scrum?
+	- PHP for the Register page: display error messages properly, sanitize user input, option to see password
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- PHP code for the Register page - DB input 
+	- PHP code for the Login page
+3. Where do I need assistance? What do I need to figure out?
+	Session for the whole website
+
+2021/05/14 Emma
+1. What I have done / not done since last Scrum?
+	- Tried to fix 404 on CSS (Fixed it this morning with apollotravels.local)
+	- Research, research, and more research on MetaMask API documention and migrations
+	- Implemented detect Ethereum provider function + connect to wallet
+	- Add fake ETH with ETH faucet for testing purposes
+	- Started nav and footer
+	- Fixed tag outside module for web3 detectEthereumProvider()
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Add dropdown menu to navbar services link
+	- Implement payment with MetaMask
+3. Where do I need assistance? What do I need to figure out?
+	- Can't translate to php, metamask only works with JS library for web3
+	- Metamask migration for web3 really hard to grasp
+
+---------------------------------------------------------------------------------------
+
+***** Bitbucket in maintenance - can't push right away ******
+
+2021/05/15 Elina
+1. What I have done / not done since last Scrum?
+    - Research more on PHP and learn more about PHP libraries
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Finish the contact page, insert the data int database
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+
+2021/05/15 Anastassia
+1. What I have done / not done since last Scrum?
+    - Studied PHP, day04blog
+    - Show, hide password with JS
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - PHP code for the Register page - DB input - transfer to main page
+    - PHP code for the Login page
+3. Where do I need assistance? What do I need to figure out?
+    - password encoding, data sanitization
+
+2021/05/15 Emma
+1. What I have done / not done since last Scrum?
+	- Research, research, and more research on MetaMask API documention and migrations
+	- Implemented detect Ethereum provider function + connect to wallet
+	- Asked teacher for help on MetaMask migration and npm
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Add dropdown menu to navbar services link
+	- Figure out functions for metamask and hopefully finish implementing it
+3. Where do I need assistance? What do I need to figure out?
+	- Metamask migration for web3 really hard to grasp
+	
+---------------------------------------------------------------------------------------
+
+2021/05/17 Emma
+1. What I have done / not done since last Scrum?
+	- Research, research, and more research on MetaMask API documention and migrations
+	- Decided to put metamask aside for the week and concentrate on other parts of the project with php/slim
+	- Started working on dropdown menu with materialize/javascript
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Finish dropodwn menu / debug the tabIndex null error
+	- Start a new page for the project with php/slim
+3. Where do I need assistance? What do I need to figure out?
+	- Metamask migration for web3 really hard to grasp
+	- JS tabIndex null error
+	
+2021/05/17 Anastassia
+1. What I have done / not done since last Scrum?
+    - Studied PHP, day04blog
+	- Registration page: password encryption, DB input, transfer to login
+2. What I plan to do from this scrum to next? (next 24 hours)
+       - PHP code for the Login page
+	   - starship page - HTML
+3. Where do I need assistance? What do I need to figure out?
+    -  data sanitization, error validation
+
+2021/05/17 Elina
+1. What I have done / not done since last Scrum?
+    - Work on the project frame(fixing navbar and footer)
+    - Work on contact page validations
+    - Synchronize some CSS styles and Materialize
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Database update: create new table for contact page and insert data
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+	
+---------------------------------------------------------------------------------------
+
+2021/05/18 Anastassia
+1. What I have done / not done since last Scrum?
+    - Studied PHP, day04blog
+	- Registration page - Ajax email validation
+2. What I plan to do from this scrum to next? (next 24 hours)
+     - PHP code for the Login page
+	 - starship page - HTML
+3. Where do I need assistance? What do I need to figure out?
+     -  error validation
+	 
+2021/05/18 Emma
+1. What I have done / not done since last Scrum?
+	- Started working on dropdown menu with materialize/javascript
+	- Started admin master page
+	- Started admin page
+	- Tried fixing multiple JS and CSS issues
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Continue admin master page
+	- Continue admin page
+3. Where do I need assistance? What do I need to figure out?
+	- Get more familiar with PHP libraries...
+
+2021/05/18 Elina
+1. What I have done / not done since last Scrum?
+    - Work on the drop down menu (materialize)
+    - Work on the sidebar menu (materialize)
+    - Work on the database - create new table contact_form
+    - Work on contact page validations
+    - Synchronize some CSS styles and Materialize
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Ajax valiation for contact form
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+	
+---------------------------------------------------------------------------------------
+
+2021/05/19 Anastassia
+1. What I have done / not done since last Scrum?
+    - Studied PHP, day04blog
+	- Registration, Login form - log activities
+	- Login - PHP side - done
+	- Starship - HTML site done 
+2. What I plan to do from this scrum to next? (next 24 hours)
+     - Booking - HTML and PHP
+3. Where do I need assistance? What do I need to figure out?
+     -  recaptcha
+	 
+2021/05/19 Emma
+1. What I have done / not done since last Scrum?
+	- Admin master page
+	- Admin page
+	- Extended On Ground Exp - Training page
+	- Integrated Google Pie charts
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Continue working on admin page
+	- Finish integrating google pie chart
+	- Rewatch yesterday's class on error handling
+3. Where do I need assistance? What do I need to figure out?
+	- Read on google pie chart integration
+	- Rewatch yesterday's class
+
+2021/05/19 Elina
+1. What I have done / not done since last Scrum?
+    - Studied PHP, day04slimblog
+    - Made dragon/spaceship page
+    - Synchronize some CSS styles and Materialize
+    - Haven't done - work on contact page validations
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Ajax valiation for contact form
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+	
+---------------------------------------------------------------------------------------
+
+2021/05/20 Emma
+1. What I have done / not done since last Scrum?
+	- Admin master page
+	- Admin page
+	- Integrated Google Pie charts
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Continue working on admin page
+	- Finish integrating google pie chart
+	- Rewatch yesterday's class on error handling
+	- Implement CRUD on admin users
+3. Where do I need assistance? What do I need to figure out?
+	- Access PHP data from JS
+	- Rewatch yesterday's class
+
+2021/05/20 Anastassia
+1. What I have done / not done since last Scrum?
+	- reCaptcha - done
+	- Access and Access denied - done
+	- Booking - stated
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Booking - HTML & PHP
+3. Where do I need assistance? What do I need to figure out?
+	- as needed
+
+2021/05/20 Elina
+1. What I have done / not done since last Scrum?
+    - Recaptcha for contact page
+    - Log for contact page
+    - Validations for contact page
+    - Successful message sent with rediraction in 5sec for contact page
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Landing page
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+	
+---------------------------------------------------------------------------------------
+
+2021/05/21 Emma
+1. What I have done / not done since last Scrum?
+	- Admin master page
+	- Admin page
+	- Integrated Google Pie charts
+	- Started CRUD on admin user
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Continue working on admin page
+	- Finish CRUD on admin user
+	- Implement CRUD on other tables from DB
+	- Fix pie chart not responsive!
+3. Where do I need assistance? What do I need to figure out?
+	- Google Pie chart not responsive!
+
+2021/05/20 Elina
+1. What I have done / not done since last Scrum?
+    - Landing page
+    - Flash messages
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Rewatch class videos
+    - Test and fix issues if needed
+3. Where do I need assistance? What do I need to figure out?
+    - PHP libraries
+	
+2021/05/21 Anastassia
+1. What I have done / not done since last Scrum?
+	- Booking - HTML and JS
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Booking - PHP
+3. Where do I need assistance? What do I need to figure out?
+	- as needed
+	
+---------------------------------------------------------------------------------------
+
+2021/05/22 Emma
+1. What I have done / not done since last Scrum?
+	- Admin master page
+	- Worked on CRUD on admin user
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Continue working on admin page
+	- Finish CRUD on admin user
+	- Implement CRUD on other tables from DB
+	- Fix pie chart not responsive!
+3. Where do I need assistance? What do I need to figure out?
+	- Google Pie chart not responsive!
+	- Implement crypto again???
+
+
+2021/05/22 Elina
+1. What I have done / not done since last Scrum?
+    - Created Delivery page
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Validations for Delivery page
+    - Create a bot
+3. Where do I need assistance? What do I need to figure out?
+    - Bot?
+	
+2021/05/22 Anastassia
+1. What I have done / not done since last Scrum?
+	- Booking - PHP - all validation, insert to DB
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Reset password, payment
+3. Where do I need assistance? What do I need to figure out?
+	- on-line payments
+	
+---------------------------------------------------------------------------------------
+
+2021/05/24 Anastassia
+1. What I have done / not done since last Scrum?
+	- Stripe = payment - done
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Test, prepare Presentation
+3. Where do I need assistance? What do I need to figure out?
+	- nothing
+	
+2021/05/24 Emma
+1. What I have done / not done since last Scrum?
+	- Finish admin page
+	- Implemented middleware
+	- Uploaded files to hosting
+2. What I plan to do from this scrum to next? (next 24 hours)
+	- Fix minor bugs
+	- Implement what worked for crypto??
+	- Make presentation, powerpoint
+3. Where do I need assistance? What do I need to figure out?
+	- Google Pie chart not responsive!
+	- Implement crypto again???
+	- recaptcha bug
+
+2021/05/24 Elina
+1. What I have done / not done since last Scrum?
+    - Created Calculator for counting the total delivery price 
+    - Animation for austonaut logo in landing page
+    - Created Calculator table in database
+    - Created call to agent 
+2. What I plan to do from this scrum to next? (next 24 hours)
+    - Prepare presentation
+    - Test the code
+3. Where do I need assistance? What do I need to figure out?
+    - 

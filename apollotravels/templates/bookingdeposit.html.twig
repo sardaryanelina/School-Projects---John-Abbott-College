@@ -1,0 +1,177 @@
+{% extends "master.html.twig" %}
+
+{% block title %}Booking Deposit
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row" id="login">
+		<h2 class="center-align teal" style="padding: 1vw;">Booking Deposit</h2>
+		<form id="payment-form" method="POST" style="background: white;padding:2rem;">
+			{% if error %}
+			<p class="errorMessage" style="color: red;">Invalid username or password. Try again or
+				<a href="/register">Register</a>.
+			</p>
+			{% endif %}
+
+			<div class="row">
+				<div class="input-field col s12 center">
+					<h3 class="teal-text">Let's start your journey to the stars!</h3>
+					<br>
+					<h4>Booking Deposit: <b>100,000.00 USD</b></h4>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<i class="material-icons prefix">person</i>
+					<input class="black-text" name="firstname" type="text" value="{{userSession.firstname}}" disabled>
+					<label class="active" for="firstname">First Name</label>
+				</div>
+				<div class="input-field col s12 m6">
+					<i class="material-icons prefix">person</i>
+					<input class="black-text" name="lastname" type="text" value="{{userSession.lastname}}" disabled>
+					<label class="active" for="lastname">Last Name</label>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="input-field col s12">
+					<div id="card-element" class="black-text">
+						<!-- A Stripe Element will be inserted here. -->
+					</div>
+					<div id="card-errors" class="red-text" role="alert"></div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col m6">
+					<a href="#!" class="enableEthereumButton"><i
+							class="medium material-icons teal-text">account_balance_wallet</i></a>
+					<!-- <button class="waves-effect waves-light btn enableEthereumButton">Metamask</button> -->
+					<span class="showAccount" style="color: #000; padding-bottom: .8rem;"></span>
+				</div>
+				<div class="col m6">
+					<p class="right-align custom_button"><input type="submit" value=" PAY DEPOSIT "
+							style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #26A69A;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;" />
+					</p>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+{% block bottom %}
+<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+	// Set your publishable key: remember to change this to your live publishable key in production
+	// See your keys here: https://dashboard.stripe.com/apikeys
+	var stripe = Stripe(
+		'pk_test_51Itz2BGSGcqwiHohCMbl6PJGTqKkezRr9gbHMXMZke2rMHPaUB3g8c3mYCmgEC2Mc6GRiwPNjZjiiOZGIv76xICV00LK9JTtqV');
+	var elements = stripe.elements();
+	// Custom styling can be passed to options when creating an Element.
+	var style = {
+		base: {
+			// Add your base input styles here. For example:
+			fontSize: '2rem',
+			color: '#000000',
+		},
+	};
+
+	// Create an instance of the card Element.
+	var card = elements.create('card', {
+		style: style
+	});
+
+	// Add an instance of the card Element into the `card-element` <div>.
+	card.mount('#card-element');
+
+	// Create a token or display an error when the form is submitted.
+	var form = document.getElementById('payment-form');
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
+
+		stripe.createToken(card).then(function (result) {
+			if (result.error) {
+				// Inform the customer that there was an error.
+				var errorElement = document.getElementById('card-errors');
+				errorElement.textContent = result.error.message;
+			} else {
+				// Send the token to your server.
+				stripeTokenHandler(result.token);
+			}
+		});
+	});
+
+	function stripeTokenHandler(token) {
+		// Insert the token ID into the form so it gets submitted to the server
+		var form = document.getElementById('payment-form');
+		var hiddenInput = document.createElement('input');
+		hiddenInput.setAttribute('type', 'hidden');
+		hiddenInput.setAttribute('name', 'stripeToken');
+		hiddenInput.setAttribute('value', token.id);
+		form.appendChild(hiddenInput);
+
+		// Submit the form
+		form.submit();
+	}
+
+
+	// metamask
+	var provider = detectEthereumProvider();
+	var ethereumButton = document.querySelector('.enableEthereumButton');
+	// var test = provider[0].pro === null ? false : true;
+	var showAccount = document.querySelector('.showAccount');
+
+	ethereumButton.addEventListener('click', () => {
+		//Will Start the metamask extension
+		if (typeof window.ethereum !== 'undefined' && ethereum.isMetaMask === true) {
+			// handle provider
+			showAccount.innerHTML = "Metamask installed!";
+			// console.log("Metamask installed!");
+
+			getAccountHandler();
+
+			ethereum.request({
+				method: 'eth_requestAccounts'
+			});
+
+		} else {
+			// handle no provider
+			// showAccount.innerHtml = "Please install metamask https://metamask.io/download.";
+			// console.log("Please install metamask.");
+			// alert("Please install metamask: https://metamask.io/download");
+
+			if (window.confirm(
+					'Please click on \'OK\' to start using MetaMask wallet.')) {
+				window.location.href = 'https://metamask.io/download';
+			};
+
+		}
+	});
+
+	async function getAccountHandler() {
+		const accounts = await ethereum.request({
+			method: 'eth_requestAccounts'
+		});
+		// const account = accounts[0];
+		const account = accounts[0];
+		showAccount.innerHTML = account;
+	}
+
+	function isLocked() {
+		ethereum.getAccount(function (err, accounts) {
+			if (err != null) {
+				console.log(err)
+			} else if (accounts.length === 0) {
+				console.log('MetaMask is locked')
+			} else {
+				console.log('MetaMask is unlocked')
+			}
+		});
+	}
+</script>
+{% endblock %}

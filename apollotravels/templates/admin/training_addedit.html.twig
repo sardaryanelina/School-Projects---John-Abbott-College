@@ -1,0 +1,73 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Update Customer Info{% endblock %}
+
+{% block content %}
+
+{# {% if errorList %}
+        <ul class="errorMessage">
+            {% for error in errorList %}
+            <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %} #}
+
+<div class="container" style="background-color: white; padding: 2rem; margin-top: 3rem !important;">
+    <div><a href="/admin"><i class="material-icons teal-text">arrow_back</i></a></div>
+    <h3 style="margin-bottom: 4rem;">{% if op == 'edit' %}Edit {% else %}Add {% endif %}Training</h3>
+
+
+    <form method="post">
+
+        {% if op == 'edit' %}
+        <div class="row">
+            <div class="col s2">
+                <label for="disabled">ID</label>
+                <input disabled value="{{t.id}}" id="disabled" type="text" class="validate" name="id">
+            </div>
+            <div class="col s2">
+                <label for="uid">User ID: </label>
+                <input type="number" id="uid" name="uid" value="{{t.user_id}}">
+                <span class="errorMessage red-text">{{errorList.userID}}</span><br>
+            </div>
+            <div class="col s2">
+                <label for="sname">Spaceship ID: </label>
+                <input type="text" id="sname" name="sid" value="{{t.spaceship_id}}">
+                <span class="errorMessage red-text">{{errorList.spaceshipID}}</span><br>
+            </div>
+        </div>
+        {% else %}
+        <div class="row">
+            <div class="col s3">
+                <label for="uid">User ID: </label>
+                <input type="number" id="uid" name="uid" value="{{t.user_id}}">
+                <span class="errorMessage red-text">{{errorList.userID}}</span><br>
+            </div>
+            <div class="col s3">
+                <label for="sid">Spaceship ID: </label>
+                <input type="number" id="sid" name="sid" value="{{t.spaceship_id}}">
+                <span class="errorMessage red-text">{{errorList.spaceshipID}}</span><br>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col s6">
+                <label for="ds">Start Date: </label>
+                <input type="date" id="ds" name="ds" value="{{t.date_start}}">
+                <span class="errorMessage red-text">{{errorList.startDate}}</span><br>
+            </div>
+            <div class="col s6">
+                <label for="de">End Date: </label>
+                <input type="date" id="de" name="de" value="{{t.date_end}}">
+                <span class="errorMessage red-text">{{errorList.endDate}}</span><br>
+            </div>
+        </div>
+
+        <input class="waves-effect waves-light btn" type="submit"
+            value="{% if op == 'edit' %}Edit Spaceship{% else %}Add Training{% endif %}">
+
+    </form>
+</div>
+
+{% endblock %}

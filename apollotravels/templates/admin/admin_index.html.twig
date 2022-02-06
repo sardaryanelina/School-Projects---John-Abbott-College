@@ -1,0 +1,327 @@
+{% extends "admin/master.html.twig" %}
+
+{% block head %}
+<!-- Google Charts -->
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twig.js/1.15.4/twig.min.js"></script>
+<script type="text/javascript">
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('number', 'Number of Training');
+        data.addRows([
+            {% for t in starshipTrainingList %}
+                ['{{t.name}}', {{t.total}}],
+            {% endfor %}
+
+            // ['falconX', 3],
+            // ['TheTraveller', 1],
+            // ['The Pearl', 1],
+            // ['Spacecruiser', 1],
+            // ['Her Majesty\'s', 2]
+        ]);
+
+        // Set chart options
+        //FIXME : make this responsive
+        var options = {
+            'title': 'Most popular ship for training',
+            // 'width': '20%',
+            // 'height': '20%',
+            'is3D': true
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+    }
+</script>
+{% endblock head %}
+
+{% block title %}Admin Page
+{% endblock %}
+
+{% block content %}
+
+{# {% for t in starshipTrainingList %}
+
+{% endfor %} #}
+
+
+<div class="container">
+
+    <!-- recent orders -->
+    <!-- ============================================================== -->
+    <div class="card" style="margin-top: 3rem !important;">
+        <div class="card-content">
+            <h5 class="card-title" style="display: inline-block;">On Ground Experience - Training</h5>
+            <a href="/admin/training/add" class="btn-floating halfway-fab waves-effect waves-light teal right"><i
+                    class="material-icons">add</i></a>
+            <div class="table-responsive" style="overflow-y: auto; max-height: 20vh">
+                <table class="responsive-table" style="border-collapse: unset !important;">
+                    <thead class="bg-light">
+                        <tr class="border-0">
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">User ID</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">#</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Name</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Email</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Start Date</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">End Date</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Spaceship</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">$ Balance</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">$ Price</th>
+                            <th class="border-0" style="position: sticky; top: 0; background:  #eee;">$ Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for t in trainingList %}
+                        <tr>
+                            <td>{{t.training_id}}</td>
+                            <td>{{t.u_id}}</td>
+                            <td>{{t.lastname}}, {{t.firstname}}</td>
+                            <td>{{t.email}}</td>
+                            <td>{{t.date_start}}</td>
+                            <td>{{t.date_end}}</td>
+                            <td>{{t.name}}</td>
+                            <td>{{t.balance}}</td>
+                            <td>5 000,00</td>
+                            <td><a href="/admin/training/edit/{{t.training_id}}">Edit</a> <a href="/admin/training/delete/{{t.training_id}}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end recent orders  -->
+
+    <!-- Pie Chart - ADMINISTRATORS -->
+    <!-- ============================================================== -->
+    <div class="row" style="height: 43vh;">
+        <!--Div that will hold the pie chart-->
+        <div class="col s5" style="height: 100%; position: relative;">
+            <div id="piechart" style="height: 100%; width: 100%;"></div>
+        </div>
+        <div class="col s7" style="height: 100%;">
+            <div class="card" style="margin-top: 0; height: 100%;">
+                <div class="card-content">
+                    <h5 class="card-title" style="display: inline-block;">Spaceships</h5>
+                    <a href="/admin/spaceship/add"
+                        class="btn-floating halfway-fab waves-effect waves-light teal right"><i
+                            class="material-icons">add</i></a>
+                    <div class="table-responsive" style="overflow-y: auto; overflow-x: hidden; height: 26vh">
+                        <!-- style="border-collapse: unset !important;" on TABLE -->
+                        <table class="responsive-table" style="border-collapse: unset !important;">
+                            <thead class="">
+                                <tr class="border-0">
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">#</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Name</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Weight Capacity (kg)</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for s in spaceshipsList %}
+                                <tr>
+                                    <td>{{s.id}}</td>
+                                    <td>{{s.name}}</td>
+                                    <td>{{s.weight_capacity}}</td>
+                                    <td><a href="/admin/spaceship/edit/{{s.id}}">Edit</a> <a
+                                            href="/admin/spaceship/delete/{{s.id}}">Delete</a></td>
+                                    {# /admin/spaceship/edit/{{s.id}} and /admin/spaceship/delete/{{s.id}} #}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- USERS - CUSTOMERS -->
+    <!-- ============================================================== -->
+    <div class="row" style="height: 42vh;">
+        <div class="col s6" style="height: 100%;">
+            <div class="card" style="margin-top: 0;">
+                <div class="card-content">
+                    <h5 class="card-title" style="display: inline-block;">Users</h5>
+                    <a href="/admin/user/add" class="btn-floating halfway-fab waves-effect waves-light teal right"><i
+                            class="material-icons">add</i></a>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID...">
+                    <div class="table-responsive" style="overflow-y: auto; overflow-x: hidden; height: 27.5vh">
+                        <!-- style="border-collapse: unset !important;" on TABLE -->
+                        <table class="responsive-table" id="myTable" style="border-collapse: unset !important;">
+                            <thead class="">
+                                <tr class="border-0">
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">#</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Name</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Email</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Created
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for u in usersList %}
+                                <tr>
+                                    <td>{{u.id}}</td>
+                                    <td>{{u.lastname}}, {{u.firstname}}</td>
+                                    <td>{{u.email}}</td>
+                                    <td>{{u.created}}</td>
+                                    <td><a href="/admin/user/edit/{{u.id}}">Edit</a> <a
+                                            href="/admin/user/delete/{{u.id}}">Delete</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s6" style="height: 100%;">
+            <!-- Admin -->
+            <!-- ============================================================== -->
+            <div class="card" style="margin-top: 0;">
+                <div class="card-content">
+                    <h5 class="card-title" style="display: inline-block;">Administrators</h5>
+                    <a href="/admin/admin/add" class="btn-floating halfway-fab waves-effect waves-light teal right"><i
+                            class="material-icons">add</i></a>
+                    <div class="table-responsive" style="overflow-y: auto; height: 32.5vh">
+                        <!-- style="border-collapse: unset !important;" on TABLE -->
+                        <table class="responsive-table" style="border-collapse: unset !important;">
+                            <thead class="">
+                                <tr class="border-0">
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">#</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Name</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Email</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Created
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for a in adminList %}
+                                <tr>
+                                    <td>{{a.id}}</td>
+                                    <td>{{a.lastname}}, {{a.firstname}}</td>
+                                    <td>{{a.email}}</td>
+                                    <td>{{a.created}}</td>
+                                    <td><a href="/admin/admin/edit/{{a.id}}">Edit</a> <a
+                                            href="/admin/admin/delete/{{a.id}}">Delete</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- Admin  -->
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12">
+            <div class="card" style="margin-top: 0;">
+                <div class="card-content">
+                    <h5 class="card-title" style="display: inline-block;">Customers</h5>
+                    <a href="admin/customers_more"
+                        class="btn-floating halfway-fab waves-effect waves-light teal right"><i
+                            class="material-icons">read_more</i></a>
+                    <div class="table-responsive" style="overflow-y: auto; height: 27.5vh">
+                        <!-- style="border-collapse: unset !important;" on TABLE -->
+                        <table class="responsive-table" style="border-collapse: unset !important;">
+                            <thead class="">
+                                <tr class="border-0">
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">#</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">User ID
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Address
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">City</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Province
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Country
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Phone</th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Balance
+                                    </th>
+                                    <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Comment
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for c in customersList %}
+                                <tr>
+                                    <td>{{c.id}}</td>
+                                    <td>{{c.user_id}}</td>
+                                    <td>{{c.street_address}}</td>
+                                    <td>{{c.city}}</td>
+                                    <td>{{c.province}}</td>
+                                    <td>{{c.country}}</td>
+                                    <td>{{c.phone}}</td>
+                                    <td>{{c.balance}}</td>
+                                    <td>{{c.comment}}</td>
+                                    {# <a href="/admin/customer/{{c.id}}">Edit</a> <a href="/admin/customer/{{c.id}}">Delete</a> #}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+{% endblock %}

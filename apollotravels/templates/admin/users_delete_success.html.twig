@@ -1,0 +1,12 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Operation Successful{% endblock %}
+
+{% block content %}
+<div class="container" style="background-color: white; padding: 2rem; margin-top: 3rem !important;">
+    <p>Operation succesful -
+        {% if type == 'admin' %}administrator{% elseif type == 'user' %}user{% elseif type == 'customer' %}customer{% elseif type == 'spaceship' %}spaceship{% elseif type == 'training' %}{% endif %}
+        deleted</p>
+    <p><a href="/admin">Click here to go back to admin interface</a></p>
+</div>
+{% endblock %}

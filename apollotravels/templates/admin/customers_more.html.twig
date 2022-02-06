@@ -1,0 +1,76 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Update Admin Info{% endblock %}
+
+{% block content %}
+
+<div class="container" style="background-color: white; padding: 1rem; margin-top: 3rem !important; height: 68vh;">
+    <div class="card" style="margin-top: 0;"></div>
+    {# <a href="/admin/customers_more"><i class="material-icons">arrow_back</i>cancel</a> #}
+    <div class="card-content">
+        <h5 class="card-title" style="display: inline-block;">Customers</h5>
+        <a href="/admin/customer/add" class="btn-floating halfway-fab waves-effect waves-light teal right"><i
+                class="material-icons">add</i></a>
+        <div class="table-responsive" style="overflow-y: auto; height: 55vh">
+            <!-- style="border-collapse: unset !important;" on TABLE -->
+            <table class="responsive-table" style="border-collapse: unset !important;">
+                <thead class="">
+                    <tr class="border-0">
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">#</th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">User ID
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Address
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">City</th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Province
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Country
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Gender
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Age
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Height
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Weight
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Insurance
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Phone</th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Balance
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Comment
+                        </th>
+                        <th class="border-0" style="position: sticky; top: 0; background:  #eee;">Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in customersList %}
+                    <tr>
+                        <td>{{c.id}}</td>
+                        <td>{{c.user_id}}</td>
+                        <td>{{c.street_address}}</td>
+                        <td>{{c.city}}</td>
+                        <td>{{c.province}}</td>
+                        <td>{{c.country}}</td>
+                        <td>{{c.gender}}</td>
+                        <td>{{c.age}}</td>
+                        <td>{{c.height}}</td>
+                        <td>{{c.weight}}</td>
+                        <td>{{c.insurance}}</td>
+                        <td>{{c.phone}}</td>
+                        <td>{{c.balance}}</td>
+                        <td>{{c.comment}}</td>
+                        <td><a href="/admin/customer/edit/{{c.id}}">Edit</a> <a
+                                href="/admin/customer/delete/{{c.id}}">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

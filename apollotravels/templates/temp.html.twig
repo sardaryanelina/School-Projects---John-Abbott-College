@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="styles/styles.css">
+	<!-- Material Icons link -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Matrilize CDN CSS link -->
+	<!-- Materialize documentation: https://materializecss.com/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<!-- Change async to defer if needed: 
+		    https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" async></script>
+	<script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js" async></script>
+	<script src="scripts/script.js" async></script>
+	<title>Document</title>
+</head>
+
+<body>
+	{# Twig documentation: https://twig.symfony.com/doc/3.x/templates.html #}
+	{# Try outs with twig tags + materiaize #}
+	<nav>
+		<div class="nav-wrapper" style="padding: 0 1rem;">
+			{# For some reason, the logo is not rendered:
+					                <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a> #}
+			<a href="#" class="brand-logo">Logo</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li>
+					<a href="#">Test</a>
+				</li>
+				<li>
+					<a href="#">Test</a>
+				</li>
+				<li> 
+					<a href="#">Test</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	{% block content %}
+	{% set foo = 'World' %}
+	<h1 class="card-panel teal lighten-2">Hello
+		<span class="blue-text text-darken-2">{{foo}}</span>
+	</h1>
+	<button class="waves-effect waves-light btn" onclick="isInstalled()">Click here to conenct to your metamask
+		wallet</button>
+	{% endblock %}
+</body>
+
+</html>

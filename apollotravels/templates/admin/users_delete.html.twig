@@ -1,0 +1,73 @@
+{% extends "admin/master.html.twig" %}
+
+{% block title %}Delete {% if type == 'admin' %}Administrator{% else %}User{% endif %}{% endblock %}
+
+{% block content %}
+
+<div class="container" style="background-color: white; padding: 2rem; margin-top: 3rem !important;">
+    {% if type == 'admin' %}
+    <h3 style="color: red;">Delete Administrator</h3>
+    ID: {{u.id}}<br>
+    Administrator: {{u.lastname}}, {{u.firstname}}<br>
+    Email: {{u.email}}<br>
+    Created On: {{u.created}}
+
+    <form method="POST" style="margin-bottom: 2rem;">
+        <p style="background-color: yellow; display: inline-block; width: auto; font-size: 1rem; margin-top: 2rem;">
+            This action is irreversible</p><br>
+        <input class="waves-effect waves-light btn red" type="submit" value="Delete Administrator">
+    </form>
+    {% elseif type == 'user' %}
+    <h3 style="color: red;">Delete User</h3>
+    ID: {{u.id}}<br>
+    User: {{u.lastname}}, {{u.firstname}}<br>
+    Email: {{u.email}}<br>
+    Created On: {{u.created}}
+
+    <form method="POST" style="margin-bottom: 2rem;">
+        <p style="background-color: yellow; display: inline-block; width: auto; font-size: 1rem; margin-top: 2rem;">
+            This action is irreversible</p><br>
+        <input class="waves-effect waves-light btn red" type="submit" value="Delete User">
+    </form>
+    {% elseif type == 'spaceship' %}
+    <h3 style="color: red;">Delete Spaceship</h3>
+    ID: {{s.id}}<br>
+    Name: {{s.name}}<br>
+    Weight Capacity: {{s.weight_capacity}} kg<br>
+
+    <form method="POST" style="margin-bottom: 2rem;">
+        <p style="background-color: yellow; display: inline-block; width: auto; font-size: 1rem; margin-top: 2rem;">
+            This action is irreversible</p><br>
+        <input class="waves-effect waves-light btn red" type="submit" value="Delete Spaceship">
+    </form>
+    {% elseif type == 'training' %}
+    <h3 style="color: red;">Delete Training</h3>
+    ID: {{t.id}}<br>
+    User ID: {{t.user_id}} <br>
+    Spaceship ID: {{t.spaceship_id}} <br>
+    Start Date: {{t.date_start}} <br>
+    End Date: {{t.date_end}} <br>
+
+    <form method="POST" style="margin-bottom: 2rem;">
+        <p style="background-color: yellow; display: inline-block; width: auto; font-size: 1rem; margin-top: 2rem;">
+            This action is irreversible</p><br>
+        <input class="waves-effect waves-light btn red" type="submit" value="Delete Training">
+    </form>
+    {% elseif type == 'customer' %}
+    <h3 style="color: red;">Delete Customer</h3>
+    Customer ID: {{c.id}}<br>
+    Address: {{c.street_address}}<br>
+    Residence: {{c.city}}, {{c.province}}, {{c.country}}, {{c.postalcode}} <br>
+    Balance: ${{c.balance}} <br>
+    Comment: {{c.comment}} <br>
+
+    <form method="POST" style="margin-bottom: 2rem;">
+        <p style="background-color: yellow; display: inline-block; width: auto; font-size: 1rem; margin-top: 2rem;">
+            This action is irreversible</p><br>
+        <input class="waves-effect waves-light btn red" type="submit" value="Delete Customer">
+    </form>
+    {% endif %}
+    <a href="/admin">Cancel</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,273 @@
+/* Basic reset using the universal selectors */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  font-family: Roboto,'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  width: 100%;
+    max-width: 100%;
+  /* overflow: hidden; */
+  /* height: 100vh; */
+  background: radial-gradient(ellipse at bottom, #181d22 0%, #020202 100%);
+}
+
+body {
+  box-sizing: border-box;
+    max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+/* End of basic reset */
+
+/* astronaut animation */
+
+.anim {
+    bottom: 15%;
+    position: absolute;
+    display: block;
+    -webkit-animation: linear;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes run {
+
+    /*to{
+        right:0;
+        top:50px;
+    }*/
+    0% {
+        left: 0;
+        display:block;
+    }
+    10% {
+        bottom: 25%;
+        left: 25%;
+        display: block;
+    }
+    20% {
+        bottom: 50%;
+        left: 50%;
+        display: block;
+    }
+    30% {
+        bottom: 75%;
+        left: 75%;
+        display: block;
+    }
+    40% {
+        bottom: 100%;
+        left: 90%;
+        display: block;
+    }
+    50% {
+        bottom: 100%;
+        left: 90%;
+        display: block;
+    }
+    60% {
+        bottom: 100%;
+        left: 90%;
+        display: block;
+    }
+    70% {
+        bottom: 100%;
+        left: 90%;
+        display: block;
+    }
+     
+    
+    100% {
+        bottom: 130%;
+        left: 90%;
+        display: none;
+    }
+}
+
+
+/* end of astronaut animation */
+
+
+
+
+#login_page {
+  max-width: 50%;
+}
+
+/* Form css */
+/* label color */
+.input-field label {
+  color: #000;
+}
+
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #000;
+}
+
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* valid color */
+.input-field input[type="text"].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+.input-field input[type="text"].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+
+/* end of form css*/
+
+/* background start animation css*/
+
+section {
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+}
+
+section .star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: animate 11s ease-out infinite, backgroundmove 22s linear infinite;
+}
+
+section .star.star1 {
+  animation-delay: -10s;
+  background: url(/images/star8.png);
+}
+
+section .star.star2 {
+  animation-delay: -20s;
+  background: url(/images/star6.png);
+}
+
+section .star.star3 {
+  animation-delay: -30s;
+  background: url(/images/star4.png);
+}
+
+section .star.star4 {
+  animation-delay: -40s;
+  background: url(/images/star2.png);
+}
+
+section .star.star5 {
+  animation-delay: -50s;
+  background: url(/images/star1.png);
+}
+
+section .star.star6 {
+  animation-delay: -60s;
+  background: url(/images/star3.png);
+}
+
+section .star.star7 {
+  animation-delay: -70s;
+  background: url(/images/star5.png);
+}
+
+section .star.star8 {
+  animation-delay: -80s;
+  background: url(/images/star7.png);
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundmove {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1.8);
+  }
+}
+/* end of background start animation css*/
+
+/* Error messages */
+span.field-icon {
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 0.5rempx;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+.redfont {
+  color: red;
+}
+
+/*contact form*/
+ #contact, #register_page, #login {
+  margin-top: 8%;
+  /* min-height: 68vh; */
+}
+/* .content{
+  min-height: 450px;
+} */
+/*end contact form*/
+
+/* Navbar hover effect btn */
+.navbtn:hover {
+  border-bottom: 0.1rem solid teal;
+}
+
+/* nav.nav-wrapper {
+  padding-left: 4rem;
+} */
+
+/*footer position fixed to the bottom*/
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+}
+
+
+/* ================ */
+/* Admin Section */
+/* ================ */
+
+
+/* Index Page */
+
+

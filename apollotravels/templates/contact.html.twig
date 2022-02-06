@@ -1,0 +1,76 @@
+{% extends "master.html.twig" %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    //recaptcha
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6Lew1NsaAAAAAJhqKotyf_0JOyPvBrrCOnoJiaac', { action: 'submit' }).then(function (token) {
+            var recaptchaResponse = document.getElementById('recaptchaResponse');
+            recaptchaResponse.value = token;
+        });
+    });
+</script>
+{% endblock head %}
+
+{% block title %}Contact
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h5 class="teal-text center-align">{{flashmessage}}</h5>
+    </div>
+    <div class="row" id="contact">
+        <h2 class="center-align teal" style="padding: 1vw;">Contact us</h2>
+        <div class="col  s12 card-panel">
+            <div class="row">
+                <form class="col m12" method="post" style="padding: 0 2rem;">
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">person</i>
+                            <input id="first_name" name="firstname" type="text" class="validate" value="{{v.firstname}}"
+                                required>
+                            <label class="active" for="first_name">First Name</label>
+                            <span class="helper-text red-text">{{errorList.firstname}}</span>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">person</i>
+                            <input id="last_name" name="lastname" type="text" class="validate" value="{{v.lastname}}"
+                                required>
+                            <label class="active" for="last_name">Last Name</label>
+                            <span class="helper-text red-text">{{errorList.lastname}}</span>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="email" name="email" type="email" class="form-input validate" value="{{v.email}}"
+                                required>
+                            <label class="active" for="email">Email</label>
+                            <span class="helper-text red-text">{{errorList.email}}</span>
+                            <span class="errorMessage red-text"></span>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">message</i>
+                            <textarea id="message" name="message" class="materialize-textarea"
+                                value="{{v.message}}"></textarea>
+                            <label class="active" for="message">Message</label>
+                            <span class="helper-text red-text">{{errorList.message}}</span>
+                        </div>
+                    </div>
+                    <!-- <div class="divider"></div> -->
+                    <div class="row">
+                        <div class="col m12">
+                            <p class="right-align custom_button">
+                                <input type="hidden" name="recaptcha_response" value="" id="recaptchaResponse">
+                                <input type="submit" value="SEND MESSAGE"
+                                    style=" font-weight: 400; border-radius: 4px; border: none; box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.15); background: #26A69A;height: 4rem;width: 15rem;font-size: 1.2rem;cursor: pointer;" />
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
