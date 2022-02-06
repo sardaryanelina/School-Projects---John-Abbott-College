@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+body {
+        background-color: rgb(111, 198, 202);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #unsplashImage {
+        max-height: 500px;
+        border: 20px solid black;
+        transform: rotate(3deg);
+    }
+
+h1{
+    font-size: 28;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #363636;
+}
+
+    .imageDetails {
+        background-color: #363636;
+        padding: 10px 38px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        width: fit-content;
+    }
+
+    .imageDetails a {
+        color: #FFF;
+    }
+
+    .imageDetails a:hover {
+        color: yellow;
+    }
+
+ul {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-left: 10%;
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        background-color: #363636;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: #d6a822;
+    }
+    button{
+        background-color: #d6a822;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        margin: 16px;
+        margin-top: 30px;
+        border: 1px solid #c59d26;
+    }
+    button a {
+        font-size: 21px;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+    }
+
+    img {
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    h2 {    
+        margin-top: 80px;
+        margin-bottom: 0;
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }

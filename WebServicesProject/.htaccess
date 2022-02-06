@@ -1,0 +1,10 @@
+RewriteEngine On
+
+#http://localhost:88/ipd25/project/homepage
+RewriteRule ^homepage$ index.php
+
+#http://localhost:88/ipd25/project/jokes
+RewriteRule ^jokes$ joke.php
+
+#http://localhost:88/ipd25/project/quotes
+RewriteRule ^quotes$ quoteoftheday.php
