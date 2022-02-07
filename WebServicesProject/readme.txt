@@ -1,8 +1,4 @@
-Team project
-
-Team members: 
-    Elina Sardaryan
-    Raisa Stepanova-Timina
+School project
 
 Unsplash Access Key: O7H9DEJCIYsvYdK9dLCPW_CxsUaxc7k56pFJBXlmIAc
 OpenWeatherMap Access API Key: c0f56b379be10e69cd0116f0fc4c1b41
